@@ -1,0 +1,3 @@
+alloc_maria_front_office_homepage:
+    path:     /
+    defaults: { _controller: AllocMariaFrontOfficeBundle:Default:index }

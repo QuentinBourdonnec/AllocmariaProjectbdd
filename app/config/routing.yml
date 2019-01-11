@@ -1,0 +1,11 @@
+alloc_maria_back_office:
+    resource: "@AllocMariaBackOfficeBundle/Resources/config/routing.yml"
+    prefix:   /bo
+
+alloc_maria_front_office:
+    resource: "@AllocMariaFrontOfficeBundle/Resources/config/routing.yml"
+    prefix:   /Allocmaria
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
