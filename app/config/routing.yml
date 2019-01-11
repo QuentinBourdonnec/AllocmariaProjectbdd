@@ -1,6 +1,6 @@
 alloc_maria_back_office:
     resource: "@AllocMariaBackOfficeBundle/Resources/config/routing.yml"
-    prefix:   /bo
+    prefix:   /backOffice
 
 alloc_maria_front_office:
     resource: "@AllocMariaFrontOfficeBundle/Resources/config/routing.yml"
