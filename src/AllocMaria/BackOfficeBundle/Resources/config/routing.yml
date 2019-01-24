@@ -1,3 +1,46 @@
-alloc_maria_back_office_homepage:
+accueil_alloc_maria_back_office_homepage:
     path:     /
-    defaults: { _controller: AllocMariaBackOfficeBundle:Default:index }
+    defaults: { _controller: AllocMariaBackOfficeBundle:Backoffice:accueil }
+
+espace_bureau_presidence_alloc_maria_back_office_homepage:
+    path:     /EspaceBureauPresidence
+    defaults: { _controller: AllocMariaBackOfficeBundle:Backoffice:BureauPresidence }
+
+statistiques_alloc_maria_back_office_homepage:
+    path:     /Statistiques
+    defaults: { _controller: AllocMariaBackOfficeBundle:Backoffice:Statistiques }
+
+liste_adherent_alloc_maria_back_office_homepage:
+    path:     /ListeAdherent
+    defaults: { _controller: AllocMariaBackOfficeBundle:Backoffice:ListeAdherent }
+
+tresorerie_alloc_maria_back_office_homepage:
+    path:     /Tresorerie
+    defaults: { _controller: AllocMariaBackOfficeBundle:Backoffice:Tresorerie }
+
+gestion_utilisateur_alloc_maria_back_office_homepage:
+    path:     /GestionUtilisateur
+    defaults: { _controller: AllocMariaBackOfficeBundle:Backoffice:GestionUtilisateur }
+
+creation_utilisateur_alloc_maria_back_office_homepage:
+    path:     /GestionUtilisateur/CreationUtilisateur
+    defaults: { _controller: AllocMariaBackOfficeBundle:Backoffice:CreationUtilisateur }
+
+liste_utilisateur_alloc_maria_back_office_homepage:
+    path:     /GestionUtilisateur/ListeUtilisateur
+    defaults: { _controller: AllocMariaBackOfficeBundle:Backoffice:ListeUtilisateur }
+
+gestion_section_alloc_maria_back_office_homepage:
+    path:     /GestionSection
+    defaults: { _controller: AllocMariaBackOfficeBundle:Backoffice:GestionSection }
+
+section_adulte_alloc_maria_back_office_homepage:
+    path:     /GestionSection/SectionAdulte
+    defaults: { _controller: AllocMariaBackOfficeBundle:Backoffice:SectionAdulte }
+
+section_enfant_alloc_maria_back_office_homepage:
+    path:     /GestionSection/SectionEnfant
+    defaults: { _controller: AllocMariaBackOfficeBundle:Backoffice:SectionEnfant }
+
+
+
