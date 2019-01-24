@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Amicale Laïque de Locmaria Plouzané</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--<link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">-->
+
+    <!-- Pour utiliser bootstrap-->
+    <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.min.css') }}" />
+    <script src={{ asset('bootstrap/js/bootstrap.min.css') }}></script>
+
+    <!-- Pour utiliser semantic -->
+    <link rel="stylesheet" href="{{ asset('semantic/out/semantic.min.css') }}" />
+    <script
+            src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
+    <!--<script src="semantic/dist/semantic.min.js"></script>-->
+    <script src="{{ asset('semantic/out/semantic.min.js') }}"></script>
+    <link rel="icon" href="{{ asset('images/favicons.ico') }}" />
+    <style>
+        .titre{
+            overflow: hidden;
+        }
+
+        .ccv{
+            width:20%;
+        }
+
+        #jumbotron{
+            padding-bottom:10px;
+            /* padding-top:20px;
+            */margin-top:-20px;
+            padding-left:5%;
+        }
+
+
+        #intro{
+            font-family:"Rockwell";
+        }
+    </style>
+
+</head>
+<body>
+
+
+<div id="background-container">
+    <div id="jumbotron" class="jumbotron" class="titre">
+
+        <h1 id="intro"><img class="ccv" src="{{ asset('images/logo.png') }}"> Amicale Laïque de Locmaria Plouzané</h1>
+
+    </div>
+</div>

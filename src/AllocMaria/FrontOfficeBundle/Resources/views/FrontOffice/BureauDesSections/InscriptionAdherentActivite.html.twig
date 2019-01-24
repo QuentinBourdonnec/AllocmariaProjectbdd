@@ -1,0 +1,131 @@
+{% extends 'AllocMariaFrontOfficeBundle:FrontOffice:layout.html.twig' %}
+
+
+{% block body %}
+
+    <style>
+
+
+
+        #bonj{
+            margin-left:20%;
+            margin-right: 20%;
+            margin-bottom:4%;
+        }
+    </style>
+
+    <script>
+        $('.ui.checkbox')
+            .checkbox()
+        ;
+    </script>
+
+
+    <div id="bonj">
+        <div class="ui breadcrumb">
+            <a class="section" href="{{ path('accueil_alloc_maria_front_office_homepage') }}">Connexion</a>
+            <i class="divider"> / </i>
+            <a class="section" href="{{ path('espace_bureau_sections_alloc_maria_front_office_homepage') }}">Espace bureau des sections</a>
+            <i class="divider"> / </i>
+            <a class="section" href="{{ path('espace_bureau_sections_liste_adherent_alloc_maria_front_office_homepage') }}">Liste adhérent</a>
+            <i class="divider"> / </i>
+            <div class="active section" >Inscription de l'adhérent</div>
+        </div>
+        <h1>Fiche d'inscription ma_section</h1><br/>
+        <h2>Choix de(s) activité(s) de l'adhérent</h2>
+    </div>
+
+    <div id="bonj">
+        <h3><b>Adhérent : </b>Carl Boyer</h3><br/><br/>
+
+        <table class="ui celled table">
+            <thead>
+            <tr><th>Activité</th>
+                <th>Lieu</th>
+                <th>Jour</th>
+                <th>Horaire</th>
+                <th>Durée</th>
+                <th>Tarif</th>
+                <th>Choix</th>
+            </tr></thead>
+            <tbody>
+            <tr>
+                <td data-label="Activite">Danse de société</td>
+                <td data-label="Lieu">Locmaria</td>
+                <td data-label="Jour"></td>
+                <td data-label="Horaire"></td>
+                <td data-label="Durée">45</td>
+                <td data-label="Tarif">55</td>
+                <td data-label="Choix">
+                    <div class="ui checkbox">
+                        <input type="checkbox" name="example">
+                        <label></label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td data-label="Activite">Rock</td>
+                <td data-label="Lieu">Locmaria</td>
+                <td data-label="Jour">Lundi</td>
+                <td data-label="Horaire"></td>
+                <td data-label="Durée">60</td>
+                <td data-label="Tarif">45</td>
+                <td data-label="Choix">
+                    <div class="ui checkbox">
+                        <input type="checkbox" name="example">
+                        <label></label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td data-label="Activite">Danse en ligne</td>
+                <td data-label="Lieu">Locmaria</td>
+                <td data-label="Jour">Mardi</td>
+                <td data-label="Horaire"></td>
+                <td data-label="Durée">60</td>
+                <td data-label="Tarif">60</td>
+                <td data-label="Choix">
+                    <div class="ui checkbox">
+                        <input type="checkbox" name="example">
+                        <label></label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td data-label="Activite">Salsa</td>
+                <td data-label="Lieu">Locmaria</td>
+                <td data-label="Jour"></td>
+                <td data-label="Horaire"></td>
+                <td data-label="Durée">45</td>
+                <td data-label="Tarif">65</td>
+                <td data-label="Choix">
+                    <div class="ui checkbox">
+                        <input type="checkbox" name="example">
+                        <label></label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td data-label="Activite">Bachata</td>
+                <td data-label="Lieu">Locmaria</td>
+                <td data-label="Jour"></td>
+                <td data-label="Horaire"></td>
+                <td data-label="Durée">45</td>
+                <td data-label="Tarif">55</td>
+                <td data-label="Choix">
+                    <div class="ui checkbox">
+                        <input type="checkbox" name="example">
+                        <label></label>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <p>Cotisation : 15€</p>
+        <p>Adhésion : 0€</p>
+        <p>Total (cotisation et adhésion hors license) : 15€</p>
+
+    </div>
+
+{% endblock %}

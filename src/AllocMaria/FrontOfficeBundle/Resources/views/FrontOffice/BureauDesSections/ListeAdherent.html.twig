@@ -1,0 +1,69 @@
+{% extends 'AllocMariaFrontOfficeBundle:FrontOffice:layout.html.twig' %}
+
+
+{% block body %}
+
+    <style>
+
+
+
+        #bonj{
+            margin-left:20%;
+            margin-right:20%;
+            margin-bottom:4%;
+        }
+    </style>
+
+
+    <div id="bonj">
+        <div class="ui breadcrumb">
+            <a class="section" href="{{ path('accueil_alloc_maria_front_office_homepage') }}">Connexion</a>
+            <i class="divider"> / </i>
+            <a class="section" href="{{ path('espace_bureau_sections_alloc_maria_front_office_homepage') }}">Espace bureau des sections</a>
+            <i class="divider"> / </i>
+            <div class="active section" >Liste adhérent</div>
+        </div>
+        <h1>Fiche d'inscription ma_section</h1><br/>
+        <h2>Choisir l'adhérent à inscrire</h2>
+    </div>
+
+
+    <div id="bonj">
+
+        <!-- Champ de recherche du nom-->
+        <div class="ui fluid category search">
+            <div class="ui icon inline input">
+                <label>Nom  &nbsp;&nbsp;</label>
+                <input class="prompt" type="text" placeholder="Rechercher nom...">
+                <i class="search icon"></i>
+            </div>
+            <div class="results"></div>
+        </div>
+
+
+        <table class="ui celled table">
+            <thead>
+            <tr><th>Nom</th>
+                <th>Prénom</th>
+                <th>Adresse</th>
+            </tr></thead>
+            <tbody>
+            <tr>
+                <td data-label="Nom">James</td>
+                <td data-label="Prenom">blunt</td>
+                <td data-label="Adresse">5 rue marois</td>
+            </tr>
+            <tr>
+                <td data-label="Nom">Jill</td>
+                <td data-label="Prenom">boucher</td>
+                <td data-label="Adresse">10 rue machin</td>
+            </tr>
+            <tr>
+                <td data-label="Nom">Elyse</td>
+                <td data-label="Prenom">Lafayette</td>
+                <td data-label="Adresse">Rue pierre armand</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="fr">
+<header>
+    <meta charset="utf-8">
+    <title>{% block title %}Amicale Laïque de Locmaria Plouzané{% endblock %}</title>
+    {% block stylesheets %}{% endblock %}
+    <link rel="icon" href="{{ asset('favicons.ico') }}" />
+    <style>
+
+
+
+        html{
+            height:100%;
+
+        }
+
+        body{
+            height:100%;
+            position: relative;
+            margin-bottom:0;
+        }
+
+        #wrap{
+            min-height:100%;
+            position: relative;
+        }
+
+        #header{
+            position: relative;
+        }
+        #main{
+            position: relative;
+            padding-bottom: 100px;
+        }
+        #footer{
+            height: auto;
+            position: absolute;
+            bottom: 0;
+            right:0;
+            left:0;
+            background :grey;
+        }
+
+    </style>
+
+</header>
+<body>
+    <!--{#<head>
+        {% include('AllocMariaFrontOfficeBundle:FrontOffice:header.html.twig') %}
+    </head>
+
+
+
+    <footer>
+        {#{% include('AllocMariaFrontOfficeBundle:FrontOffice:footer.html.twig') %}#}
+        <p>footer</p>
+    </footer>#}-->
+
+    <div id="wrap">
+        <div id="header">
+            {% include('AllocMariaFrontOfficeBundle:FrontOffice:header.html.twig') %}
+        </div>
+        <div id="main">
+            {% block body %}{% endblock %}
+        </div>
+        <div id="footer">
+            {% include('AllocMariaFrontOfficeBundle:FrontOffice:footer.html.twig') %}
+
+        </div>
+    </div>
+
+</body>
+
+</html>

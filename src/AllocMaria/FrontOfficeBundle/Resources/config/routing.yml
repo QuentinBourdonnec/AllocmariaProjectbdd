@@ -1,3 +1,57 @@
-alloc_maria_front_office_homepage:
+accueil_alloc_maria_front_office_homepage:
     path:     /
-    defaults: { _controller: AllocMariaFrontOfficeBundle:Default:index }
+    defaults: { _controller: AllocMariaFrontOfficeBundle:Frontoffice:accueil }
+
+
+
+
+espace_bureau_sections_alloc_maria_front_office_homepage:
+    path:     /EspaceBureauDesSections
+    defaults: { _controller: AllocMariaFrontOfficeBundle:Frontoffice:BureauSections }
+
+espace_bureau_sections_nouvel_adhérent_alloc_maria_front_office_homepage:
+    path:     /EspaceBureauDesSections/NouvelAdherent
+    defaults: { _controller: AllocMariaFrontOfficeBundle:Frontoffice:NouvelAdherent }
+
+espace_bureau_sections_nouvel_adhérent_mineur_alloc_maria_front_office_homepage:
+    path:     /EspaceBureauDesSections/NouvelAdherent/Mineur
+    defaults: { _controller: AllocMariaFrontOfficeBundle:Frontoffice:NouvelAdherentMineur }
+
+espace_bureau_sections_nouvel_adhérent_majeur_alloc_maria_front_office_homepage:
+    path:     /EspaceBureauDesSections/NouvelAdherent/Majeur
+    defaults: { _controller: AllocMariaFrontOfficeBundle:Frontoffice:NouvelAdherentMajeur }
+
+espace_bureau_sections_liste_adherent_alloc_maria_front_office_homepage:
+    path:     /EspaceBureauDesSections/ListeAdherent
+    defaults: { _controller: AllocMariaFrontOfficeBundle:Frontoffice:ListeAdherent }
+
+espace_bureau_sections_inscription_adherent_activite_alloc_maria_front_office_homepage:
+    path:     /EspaceBureauDesSections/ListeAdherent/InscriptionAdherentActivite
+    defaults: { _controller: AllocMariaFrontOfficeBundle:Frontoffice:InscriptionAdherentActivite }
+
+espace_bureau_sections_ma_section_alloc_maria_front_office_homepage:
+    path:     /EspaceBureauDesSections/MaSection
+    defaults: { _controller: AllocMariaFrontOfficeBundle:Frontoffice:MaSection }
+
+
+
+
+
+espace_bureau_encaissement_alloc_maria_front_office_homepage:
+    path:     /EspaceBureauEncaissement
+    defaults: { _controller: AllocMariaFrontOfficeBundle:Frontoffice:BureauEncaissement }
+
+espace_bureau_encaissement_validation_inscription_alloc_maria_front_office_homepage:
+    path:     /EspaceBureauEncaissement/ValidationInscription
+    defaults: { _controller: AllocMariaFrontOfficeBundle:Frontoffice:ValidationInscription }
+
+espace_bureau_encaissement_reglement_inscription_alloc_maria_front_office_homepage:
+    path:     /EspaceBureauEncaissement/ValidationInscription/ReglementInscription
+    defaults: { _controller: AllocMariaFrontOfficeBundle:Frontoffice:ReglementInscription }
+
+
+
+
+
+
+

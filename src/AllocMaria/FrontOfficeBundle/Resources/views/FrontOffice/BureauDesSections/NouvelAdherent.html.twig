@@ -1,0 +1,111 @@
+{% extends 'AllocMariaFrontOfficeBundle:FrontOffice:layout.html.twig' %}
+
+
+{% block body %}
+
+
+
+
+    <style>
+
+
+
+        .bonj{
+            margin-left:20%;
+            margin-right:20%;
+            margin-bottom:4%;
+        }
+    </style>
+
+    <script type="text/javascript">
+        $('.ui.radio.checkbox')
+            .checkbox()
+        ;
+
+
+    </script>
+
+
+    <div class="bonj">
+        <div class="ui breadcrumb">
+            <a class="section" href="{{ path('accueil_alloc_maria_front_office_homepage') }}">Connexion</a>
+            <i class="divider"> / </i>
+            <a class="section" href="{{ path('espace_bureau_sections_alloc_maria_front_office_homepage') }}">Espace bureau des sections</a>
+            <i class="divider"> / </i>
+            <div class="active section" >Nouvel adhérent</div>
+        </div>
+
+        <h1>Créer un nouvel adhérent</h1>
+    </div>
+
+
+
+
+    <div class="bonj">
+        <form class="ui form">
+
+            <div class="ui form">
+                <div class="inline fields">
+                    <div class="required field">
+                    <label for="sexe">Sexe :</label>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="sexe" checked="" tabindex="0" class="hidden">
+                            <label>Homme</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="sexe" tabindex="0" class="hidden">
+                            <label>Femme</label>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+            <div class="required inline field">
+                <label>Nom :</label>
+                <input type="text" name="Nom" placeholder="Nom">
+            </div>
+            <div class="required inline field">
+                <label>Prénom :</label>
+                <input type="text" name="prenom" placeholder="Prénom">
+            </div>
+            <div class="required inline field">
+                <label>Adresse :</label>
+                <input type="text" name="Adresse" placeholder="Adresse">
+            </div>
+            <div class="required inline field">
+                <label>Ville :</label>
+                <input type="text" name="Ville" placeholder="Ville">
+            </div>
+            <div class="required inline field">
+                <label>Code postal :</label>
+                <input type="text" name="Code postal" placeholder="Code postal">
+            </div>
+            <div class="required inline field">
+                <label>Date naissance :</label>
+                <input type="text" name="Date naissance" placeholder="Date naissance">
+            </div>
+
+
+
+
+
+
+            <button class="ui button" type="submit">Continuer l'inscription</button>
+        </form>
+
+
+
+
+    </div>
+
+
+
+
+{% endblock %}

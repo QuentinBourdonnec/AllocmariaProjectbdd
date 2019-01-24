@@ -1,0 +1,204 @@
+{% extends 'AllocMariaFrontOfficeBundle:FrontOffice:layout.html.twig' %}
+
+
+{% block body %}
+
+    <style>
+
+
+
+        .bonj{
+            margin-left:20%;
+            margin-right:20%;
+            margin-bottom:4%;
+        }
+
+        #foo1{
+            visibility:hidden;
+        }
+
+        #foo2{
+            visibility:hidden;
+        }
+    </style>
+
+
+    <div class="bonj">
+        <div class="ui breadcrumb">
+            <a class="section" href="{{ path('accueil_alloc_maria_front_office_homepage') }}">Connexion</a>
+            <i class="divider"> / </i>
+            <a class="section" href="{{ path('espace_bureau_sections_alloc_maria_front_office_homepage') }}">Espace bureau des sections</a>
+            <i class="divider"> / </i>
+            <a class="section" href="{{ path('espace_bureau_sections_nouvel_adhérent_alloc_maria_front_office_homepage') }}">Nouvel adhérent</a>
+            <i class="divider"> / </i>
+            <div class="active section" >Nouvel adhérent Mineur</div>
+        </div>
+
+        <h1>Finalisation inscription adhérent enfant</h1>
+    </div>
+
+
+    <script type="text/javascript">
+
+        /** Fonction basculant la visibilité d'un élément dom
+         * @parameter anId string l'identificateur de la cible à montrer, cacher
+         */
+        function toggle(anId)
+        {
+            node = document.getElementById(anId);
+            if (node.style.visibility=="hidden")
+            {
+                // Contenu caché, le montrer
+                node.style.visibility = "visible";
+                node.style.height = "auto";			// Optionnel rétablir la hauteur
+            }
+            else
+            {
+                // Contenu visible, le cacher
+                node.style.visibility = "hidden";
+                node.style.height = "0";			// Optionnel libérer l'espace
+            }
+        }
+
+    </script>
+
+
+    <div class="bonj">
+        <form class="ui form">
+
+
+
+
+
+            <div class="required inline field">
+                <label>Nom :</label><p>Bourdonnec</p>
+            </div>
+            <div class="required inline field">
+                <label>Prénom :</label><p>Quentin</p>
+            </div>
+            <div class="required inline field">
+                <label>Adresse :</label><p>5 rue cuirassé bretagne</p>
+            </div>
+            <div class="required inline field">
+                <label>Ville :</label><p>BREST</p>
+            </div>
+            <div class="required inline field">
+                <label>Code postal :</label><p>29200</p>
+            </div>
+            <div class="required inline field">
+                <label>Date naissance :</label><p>10/07/1997</p>
+            </div><br/>
+
+
+            <div class="ui segment">
+                <div class="ui two column very relaxed grid">
+                    <div class="column">
+                        <h2><u>Information père :</u></h2><br/>
+                        <div class="required inline field">
+                            <label>Nom :</label>
+                            <input type="text" name="Nom" placeholder="Nom">
+                        </div>
+                        <div class="required inline field">
+                            <label>Prenom :</label>
+                            <input type="text" name="Prenom" placeholder="Prenom">
+                        </div>
+                        <div class=" inline field">
+                            <label>Numéro domicile :</label>
+                            <input type="text" name="Numéro domicile" placeholder="Numéro domicile">
+                        </div>
+                        <div class="required inline field">
+                            <label>Numéro portable :</label>
+                            <input type="text" name="Numéro portable" placeholder="Numéro portable">
+                        </div>
+                        <div class="required inline field">
+                            <label>Mail :</label>
+                            <input type="text" name="Mail" placeholder="Mail">
+                        </div>
+
+                        <a onclick = "toggle('foo1')">Adresse différente de l'enfant ?</a>
+                        <div id="foo1">
+                            <div class="required inline field">
+                                <label>Adresse :</label>
+                                <input type="text" name="Adresse" placeholder="Adresse">
+                            </div>
+                            <div class="required inline field">
+                                <label>Ville :</label>
+                                <input type="text" name="Ville" placeholder="Ville">
+                            </div>
+                            <div class="required inline field">
+                                <label>Code postal :</label>
+                                <input type="text" name="Code postal" placeholder="Code postal">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="column">
+                        <h2><u>Information mère :</u></h2><br/>
+                        <div class="required inline field">
+                            <label>Nom :</label>
+                            <input type="text" name="Nom" placeholder="Nom">
+                        </div>
+                        <div class="required inline field">
+                            <label>Prenom :</label>
+                            <input type="text" name="Prenom" placeholder="Prenom">
+                        </div>
+                        <div class=" inline field">
+                            <label>Numéro domicile :</label>
+                            <input type="text" name="Numéro domicile" placeholder="Numéro domicile">
+                        </div>
+                        <div class="required inline field">
+                            <label>Numéro portable :</label>
+                            <input type="text" name="Numéro portable" placeholder="Numéro portable">
+                        </div>
+                        <div class="required inline field">
+                            <label>Mail :</label>
+                            <input type="text" name="Mail" placeholder="Mail">
+                        </div>
+
+                        <a onclick = "toggle('foo2')">Adresse différente de l'enfant ?</a>
+                        <div id="foo2">
+                            <div class="required inline field">
+                                <label>Adresse :</label>
+                                <input type="text" name="Adresse" placeholder="Adresse">
+                            </div>
+                            <div class="required inline field">
+                                <label>Ville :</label>
+                                <input type="text" name="Ville" placeholder="Ville">
+                            </div>
+                            <div class="required inline field">
+                                <label>Code postal :</label>
+                                <input type="text" name="Code postal" placeholder="Code postal">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui vertical divider">
+                </div>
+            </div>
+
+            <br/>
+
+            <div class="required inline field">
+                <div class="ui checkbox">
+                    <input type="checkbox" name="conditions">
+                    <label>En soumettant ce formulaire, j'accepte que les informations saisies soient utilisées et exploitées par l'Amicale Laïque</label>
+                </div>
+            </div>
+
+            <div class="required inline field">
+                <div class="ui checkbox">
+                    <input type="checkbox" name="image">
+                    <label>J'accepte le droit à l'image en qualité de responsable légal de l'enfant</label>
+                </div>
+            </div>
+
+
+
+            <button class="ui button" type="submit">Créer le nouvel adhérent</button>
+        </form>
+
+
+
+
+    </div>
+{% endblock %}

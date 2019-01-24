@@ -1,0 +1,96 @@
+{% extends 'AllocMariaFrontOfficeBundle:FrontOffice:layout.html.twig' %}
+
+
+{% block body %}
+
+
+    <style>
+
+
+        hr{
+            margin: 100px auto;
+            width: 50%;
+            height: 2px;
+            background-color: #f90;
+            border: none; /*on supprime le style par défaut*/
+        }
+
+        .co
+        {
+            margin-left:20%;
+            margin-right:20%;
+            padding-top:2%;
+        }
+    </style>
+
+
+    <H2 style="text-align:center">Identifiez-vous</H2>
+
+    <div class="co">
+        <div class="ui placeholder segment">
+            <div class="ui two column stackable center aligned grid">
+                <div class="ui vertical divider">Ou</div>
+                <div class="middle aligned row">
+                    <div class="column">
+                        <div id="gauche" style="text-align:center">
+                            <form class="ui form">
+                                <h4 class="ui dividing header">Accès bureau des sections</h4>
+                                <div class="field">
+                                    <label>Identifiant</label>
+                                    <div class="fields">
+                                        <div class="field">
+                                            <input type="text"  placeholder="Identifiant">
+                                        </div>
+                                    </div>
+                                    <label>Mot de passe</label>
+                                    <div class="fields">
+                                        <div class="field">
+                                            <input type="password" placeholder="Mot de passe">
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="ui button" type="submit">Connexion</button>
+                            </form>
+
+                        </div>
+                    </div>
+                    <div class="column"><div id="droite" style="text-align:center">
+                            <form class="ui form">
+                                <h4 class="ui dividing header">Accès encaissement</h4>
+                                <div class="field">
+                                    <label>Identifiant</label>
+                                    <div class="fields">
+                                        <div class="field">
+                                            <input type="text"  placeholder="identifiant">
+                                        </div>
+                                    </div>
+                                    <label>Mot de passe</label>
+                                    <div class="fields">
+                                        <div class="field">
+                                            <input type="password" placeholder="Mot de passe">
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="ui button" type="submit">Connexion</button>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <hr>
+
+    <div style="text-align:center">
+        <a href="{{ path('accueil_alloc_maria_back_office_homepage') }}"><button class="ui button" type="submit">Accès administrateur</button></a>
+    </div>
+
+
+
+
+
+{% endblock %}
+

@@ -1,0 +1,95 @@
+{% extends 'AllocMariaFrontOfficeBundle:FrontOffice:layout.html.twig' %}
+
+
+{% block body %}
+
+    <style>
+
+
+
+        .bonj{
+            margin-left:20%;
+            margin-right:20%;
+            margin-bottom:4%;
+        }
+    </style>
+
+
+    <div class="bonj">
+        <div class="ui breadcrumb">
+            <a class="section" href="{{ path('accueil_alloc_maria_front_office_homepage') }}">Connexion</a>
+            <i class="divider"> / </i>
+            <a class="section" href="{{ path('espace_bureau_sections_alloc_maria_front_office_homepage') }}">Espace bureau des sections</a>
+            <i class="divider"> / </i>
+            <a class="section" href="{{ path('espace_bureau_sections_nouvel_adhérent_alloc_maria_front_office_homepage') }}">Nouvel adhérent</a>
+            <i class="divider"> / </i>
+            <div class="active section" >Nouvel adhérent Majeur</div>
+        </div>
+
+        <h1>Finalisation inscription adhérent adulte</h1>
+    </div>
+
+
+    <div class="bonj">
+        <form class="ui form">
+
+
+
+
+
+            <div class="required inline field">
+                <label>Nom :</label><p>Bourdonnec</p>
+            </div>
+            <div class="required inline field">
+                <label>Prénom :</label><p>Quentin</p>
+            </div>
+            <div class="required inline field">
+                <label>Adresse :</label><p>5 rue cuirassé bretagne</p>
+            </div>
+            <div class="required inline field">
+                <label>Ville :</label><p>BREST</p>
+            </div>
+            <div class="required inline field">
+                <label>Code postal :</label><p>29200</p>
+            </div>
+            <div class="required inline field">
+                <label>Date naissance :</label><p>10/07/1997</p>
+            </div>
+
+
+
+
+            <div class="required inline field">
+                <label>Mail :</label>
+                <input type="text" name="Mail" placeholder="Mail">
+            </div>
+            <div class="required inline field">
+                <label>Numéro portable :</label>
+                <input type="text" name="Numéro portable" placeholder="Numéro portable">
+            </div>
+
+            <div class="required inline field">
+                <div class="ui checkbox">
+                    <input type="checkbox" name="conditions">
+                    <label>En soumettant ce formulaire, j'accepte que les informations saisies soient utilisées et exploitées par l'Amicale Laïque</label>
+                </div>
+            </div>
+
+            <div class="required inline field">
+                <div class="ui checkbox">
+                    <input type="checkbox" name="image">
+                    <label>J'accepte le droit à l'image</label>
+                </div>
+            </div>
+
+
+
+            <button class="ui button" type="submit">Créer le nouvel adhérent</button>
+        </form>
+
+
+
+
+    </div>
+
+{% endblock %}
