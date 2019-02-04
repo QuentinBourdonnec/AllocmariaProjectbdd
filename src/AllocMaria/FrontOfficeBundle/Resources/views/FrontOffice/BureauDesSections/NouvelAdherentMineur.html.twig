@@ -13,13 +13,14 @@
             margin-bottom:4%;
         }
 
-        #foo1{
-            visibility:hidden;
+        /*#foo1{
+            visibility:hidden;height: 0;
         }
 
         #foo2{
             visibility:hidden;
-        }
+            height: 0;
+        }*/
     </style>
 
 
@@ -115,8 +116,8 @@
                             <input type="text" name="Mail" placeholder="Mail">
                         </div>
 
-                        <a onclick = "toggle('foo1')">Adresse différente de l'enfant ?</a>
-                        <div id="foo1">
+                        <a onclick = "toggle('foo1')" >Adresse différente de l'enfant ?</a>
+                        <div id="foo1" style="visibility:hidden;height: 0;">
                             <div class="required inline field">
                                 <label>Adresse :</label>
                                 <input type="text" name="Adresse" placeholder="Adresse">
@@ -156,7 +157,7 @@
                         </div>
 
                         <a onclick = "toggle('foo2')">Adresse différente de l'enfant ?</a>
-                        <div id="foo2">
+                        <div id="foo2" style="visibility:hidden;height: 0;">
                             <div class="required inline field">
                                 <label>Adresse :</label>
                                 <input type="text" name="Adresse" placeholder="Adresse">

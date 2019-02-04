@@ -3,6 +3,100 @@
 
 {% block body %}
 
-espace bureau presidence
+    <style>
+        .add_user{
+            text-align: center;
+            width:80%;
+            height: auto;
+
+        }
+
+        #bonj{
+            margin-left:20%;
+            margin-bottom:4%;
+        }
+
+        #bonj1{
+            margin-left:12%;
+            margin-right:12%;
+            margin-bottom:4%;
+        }
+        #bonj2{
+            margin-left:12%;
+            margin-right:38%;
+            margin-bottom:4%;
+        }
+    </style>
+
+
+
+
+
+    <div id="bonj">
+        <div class="ui breadcrumb">
+            <a class="section" href="{{ path('accueil_alloc_maria_back_office_homepage') }}">Connexion</a>
+            <i class="divider"> / </i>
+            <div class="active section" >Espace bureau de la présidence</div>
+        </div>
+
+        <h1>Bonjour Marie-Hélène</h1>
+    </div>
+
+    <div id="bonj1">
+        <div class="ui three column doubling stackable grid container">
+            <div class="column" >
+                <div class="ui placeholder segment" >
+                    <a href="{{ path('statistiques_alloc_maria_back_office_homepage') }}">
+
+                        <img  class="add_user" src="{{ asset('images/add_user.png') }}">
+                    </a>
+                </div>
+                <h1  style="text-align:center;" >Statistiques</h1>
+
+            </div>
+
+            <div class="column">
+                <div class="ui placeholder segment" >
+                    <a href="{{ path('liste_adherent_alloc_maria_back_office_homepage') }}">
+                        <img  class="add_user" src="{{ asset('images/screen.png') }}">
+                    </a>
+                </div>
+                <h1  style="text-align:center;" >Les adhérents</h1>
+            </div>
+
+            <div class="column">
+                <div class="ui placeholder segment" >
+                    <a href="{{ path('tresorerie_alloc_maria_back_office_homepage') }}">
+                        <img  class="add_user" src="{{ asset('images/gestion.png') }}">
+                    </a>
+                </div>
+                <h1  style="text-align:center;">Trésorerie</h1>
+            </div>
+
+        </div>
+    </div>
+    <div id="bonj2">
+        <div class="ui two column doubling stackable grid container">
+            <div class="column" >
+                <div class="ui placeholder segment" >
+                    <a href="{{ path('gestion_utilisateur_alloc_maria_back_office_homepage') }}">
+
+                        <img  class="add_user" src="{{ asset('images/add_user.png') }}">
+                    </a>
+                </div>
+                <h1  style="text-align:center;" >Gestion des comptes utilisateurs</h1>
+
+            </div>
+
+            <div class="column">
+                <div class="ui placeholder segment" >
+                    <a href="{{ path('gestion_section_alloc_maria_back_office_homepage') }}">
+                        <img  class="add_user" src="{{ asset('images/screen.png') }}">
+                    </a>
+                </div>
+                <h1  style="text-align:center;" >Gestion des sections</h1>
+            </div>
+        </div>
+    <div>
 
 {% endblock %}

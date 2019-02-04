@@ -23,6 +23,31 @@
         }
     </style>
 
+    <script type="text/javascript">
+
+        /** Fonction basculant la visibilité d'un élément dom
+         * @parameter anId string l'identificateur de la cible à montrer, cacher
+         */
+        function toggle(anId)
+        {
+            node = document.getElementById(anId);
+            if (node.style.visibility=="hidden")
+            {
+                // Contenu caché, le montrer
+                node.style.visibility = "visible";
+                node.style.height = "auto";			// Optionnel rétablir la hauteur
+            }
+            else
+            {
+                // Contenu visible, le cacher
+                node.style.visibility = "hidden";
+                node.style.height = "auto";			// Optionnel libérer l'espace
+            }
+        }
+
+    </script>
+
+
 
     <H2 style="text-align:center">Identifiez-vous</H2>
 
@@ -35,6 +60,13 @@
                         <div id="gauche" style="text-align:center">
                             <form class="ui form">
                                 <h4 class="ui dividing header">Accès bureau des sections</h4>
+                                <div id="alert1" style="visibility:hidden;">
+                                    <div class="ui form error" >
+                                        <div class="ui error message">
+                                            <p>L'identifiant ou le mot de passe est incorrect.</p>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="field">
                                     <label>Identifiant</label>
                                     <div class="fields">
@@ -49,14 +81,23 @@
                                         </div>
                                     </div>
                                 </div>
-                                <button class="ui button" type="submit">Connexion</button>
+
+
                             </form>
+                            <button class="ui button" type="submit" onclick="toggle('alert1')"  >Connexion</button>
 
                         </div>
                     </div>
                     <div class="column"><div id="droite" style="text-align:center">
                             <form class="ui form">
                                 <h4 class="ui dividing header">Accès encaissement</h4>
+                                <div id="alert2" style="visibility:hidden;">
+                                    <div class="ui form error" >
+                                        <div class="ui error message">
+                                            <p>L'identifiant ou le mot de passe est incorrect.</p>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="field">
                                     <label>Identifiant</label>
                                     <div class="fields">
@@ -71,8 +112,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <button class="ui button" type="submit">Connexion</button>
                             </form>
+                            <button class="ui button" type="submit" onclick="toggle('alert2')"  >Connexion</button>
 
                         </div>
                     </div>
@@ -87,7 +128,6 @@
     <div style="text-align:center">
         <a href="{{ path('accueil_alloc_maria_back_office_homepage') }}"><button class="ui button" type="submit">Accès administrateur</button></a>
     </div>
-
 
 
 

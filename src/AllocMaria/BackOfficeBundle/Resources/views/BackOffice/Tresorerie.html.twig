@@ -3,6 +3,26 @@
 
 {% block body %}
 
-Tresorerie
+    <style>
+        .bonj{
+            margin-left:20%;
+            margin-right:20%;
+            margin-bottom:4%;
+        }
+    </style>
+
+
+
+    <div class="bonj">
+        <div class="ui breadcrumb">
+            <a class="section" href="{{ path('accueil_alloc_maria_back_office_homepage') }}">Connexion</a>
+            <i class="divider"> / </i>
+            <a class="section" href="{{ path('espace_bureau_presidence_alloc_maria_back_office_homepage') }}">Espace bureau de la présidence</a>
+            <i class="divider"> / </i>
+            <div class="active section" >Trésorerie</div>
+        </div>
+
+        <h1>Trésorerie</h1>
+    </div>
 
 {% endblock %}

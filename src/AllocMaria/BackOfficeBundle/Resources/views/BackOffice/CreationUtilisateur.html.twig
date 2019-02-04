@@ -3,7 +3,29 @@
 
 {% block body %}
 
-Creation utilisateur
+    <style>
+    .bonj{
+        margin-left:20%;
+        margin-right:20%;
+        margin-bottom:4%;
+    }
+</style>
+
+
+
+    <div class="bonj">
+        <div class="ui breadcrumb">
+            <a class="section" href="{{ path('accueil_alloc_maria_back_office_homepage') }}">Connexion</a>
+            <i class="divider"> / </i>
+            <a class="section" href="{{ path('espace_bureau_presidence_alloc_maria_back_office_homepage') }}">Espace bureau de la présidence</a>
+            <i class="divider"> / </i>
+            <a class="section" href="{{ path('gestion_utilisateur_alloc_maria_back_office_homepage') }}">Gestion des utilisateurs</a>
+            <i class="divider"> / </i>
+            <div class="active section" >Creation d'un utilisateur</div>
+        </div>
+
+        <h1>Création d'un nouvel utilisateur</h1>
+    </div>
 
 
 {% endblock %}

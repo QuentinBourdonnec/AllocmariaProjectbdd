@@ -11,12 +11,43 @@
 
     </style>
 
+    <script type="text/javascript">
+
+        /** Fonction basculant la visibilité d'un élément dom
+         * @parameter anId string l'identificateur de la cible à montrer, cacher
+         */
+        function toggle(anId)
+        {
+            node = document.getElementById(anId);
+            if (node.style.visibility=="hidden")
+            {
+                // Contenu caché, le montrer
+                node.style.visibility = "visible";
+                node.style.height = "auto";			// Optionnel rétablir la hauteur
+            }
+            else
+            {
+                // Contenu visible, le cacher
+                node.style.visibility = "hidden";
+                node.style.height = "auto";			// Optionnel libérer l'espace
+            }
+        }
+
+    </script>
+
     <h1 style="text-align: center">Connexion en tant qu'administrateur</h1>
     <div class="con">
         <div class="ui placeholder segment">
             <div class="ui one column very relaxed stackable grid">
                 <div class="column">
                     <div class="ui form">
+                        <div id="alert1" style="visibility:hidden;height:0;">
+                            <div class="ui form error" >
+                                <div class="ui error message">
+                                    <p>L'identifiant ou le mot de passe est incorrect.</p>
+                                </div>
+                            </div>
+                        </div>
                         <div class="field">
                             <label>Identifiant</label>
                             <div class="ui left icon input">
@@ -31,7 +62,7 @@
                                 <i class="lock icon"></i>
                             </div>
                         </div>
-                        <div class="ui blue submit button">Se connecter</div>
+                        <div class="ui blue submit button" onclick="toggle('alert1')">Se connecter</div>
                     </div>
                 </div>
 
