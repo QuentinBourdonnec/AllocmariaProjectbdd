@@ -67,20 +67,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!--<div class="field">
-                                    <label>Identifiant</label>
-                                    <div class="fields">
-                                        <div class="field">
-                                            <input type="text"  placeholder="Identifiant">
-                                        </div>
-                                    </div>
-                                    <label>Mot de passe</label>
-                                    <div class="fields">
-                                        <div class="field">
-                                            <input type="password" placeholder="Mot de passe">
-                                        </div>
-                                    </div>
-                                </div>-->
+
 
                                 <div class="field">
                                     {{ form_start(form) }}
@@ -104,23 +91,15 @@
                                 </div>
 
 
-
-
-
-
-
                             <!--</form>-->
 
-
-
-                            <!--<button class="ui button" type="submit" onclick="toggle('alert1')"  >Connexion</button>-->
 
                         </div>
                     </div>
 
 
                     <div class="column"><div id="droite" style="text-align:center">
-                            <form class="ui form">
+                            <!--<form class="ui form">-->
                                 <h4 class="ui dividing header">Accès encaissement</h4>
                                 <div id="alert2" style="visibility:hidden;">
                                     <div class="ui form error" >
@@ -129,6 +108,28 @@
                                         </div>
                                     </div>
                                 </div>
+
+                            <div class="field">
+                                {{ form_start(form2) }}
+                                <label>Identifiant</label>
+                                <div class="fields">
+                                    <div class="field">
+                                        {{ form_widget(form2.identifiant_encaissement, { 'attr': {'class': 'prompt', 'placeholder': 'Identifiant'} }) }}
+                                        <!--<input type="text"  placeholder="Identifiant">-->
+                                    </div>
+                                </div>
+                                <label>Mot de passe</label>
+                                <div class="fields">
+                                    <div class="field">
+                                        {{ form_widget(form2.mdp_encaissement, { 'attr': {'class': 'prompt', 'placeholder': 'Mot de passe'} }) }}
+                                        <!--<input type="password" placeholder="Mot de passe">-->
+                                    </div>
+                                </div>
+                                <input class="ui primary button" name="action" type="submit" value="Connexion" />
+                                {{ form_end(form2) }}
+
+                            </div>
+                                <!--
                                 <div class="field">
                                     <label>Identifiant</label>
                                     <div class="fields">
@@ -142,9 +143,9 @@
                                             <input type="password" placeholder="Mot de passe">
                                         </div>
                                     </div>
-                                </div>
-                            </form>
-                            <button class="ui button" type="submit" onclick="toggle('alert2')"  >Connexion</button>
+                                </div>-->
+                            <!--</form>-->
+                            <!--<button class="ui button" type="submit" onclick="toggle('alert2')"  >Connexion</button>-->
 
                         </div>
                     </div>
@@ -159,12 +160,6 @@
     <div style="text-align:center">
         <a href="{{ path('accueil_alloc_maria_back_office_homepage') }}"><button class="ui button" type="submit">Accès administrateur</button></a>
     </div>
-
-
-
-
-
-
 
 
 {% endblock %}
