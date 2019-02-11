@@ -23,7 +23,10 @@
             <i class="divider"> / </i>
             <div class="active section" >Liste adhérent</div>
         </div>
-        <h1>Fiche d'inscription ma_section</h1><br/>
+        <h1>Fiche d'inscription
+
+
+        </h1><br/>
         <h2>Choisir l'adhérent à inscrire</h2>
     </div>
 
@@ -31,39 +34,56 @@
     <div id="bonj">
 
         <!-- Champ de recherche du nom-->
-        <div class="ui fluid category search">
+        <!--<div class="ui fluid category search">
             <div class="ui icon inline input">
                 <label>Nom  &nbsp;&nbsp;</label>
                 <input class="prompt" type="text" placeholder="Rechercher nom...">
                 <i class="search icon"></i>
             </div>
             <div class="results"></div>
+        </div>-->
+
+        {{ form_start(form) }}
+
+        <div class="ui fluid category search">
+            <div class="ui icon inline input">
+                <!--<label>Nom  &nbsp;&nbsp;</label>-->
+                {{ form_widget(form.recherche, { 'attr': {'class': 'prompt'} }) }}
+                {#{{ form_widget(form.recherche, { 'attr': {'class': 'prompt'} }) }}#}
+                <!--<input class="prompt" type="text" placeholder="Rechercher nom...">-->
+                <i class="search icon"></i>
+                <input class="ui primary button" name="action" type="submit" value="Recherche par nom" />
+                <input class="ui primary button" name="action" type="submit" value="Recherche par prénom" />
+            </div>
+            <div class="results"></div>
         </div>
+        {{ form_end(form) }}
 
 
+        <!--{# {{ form_start(form) }}
+        {{ form_widget(form.recherche, { 'attr': {'class': 'ui input'} }) }}
+        <input class="ui primary button" name="action" type="submit" value="Nom" />
+        {{ form_end(form) }}#}-->
+
+       <!-- Affichage des adhérents -->
         <table class="ui celled table">
-            <thead>
-            <tr><th>Nom</th>
-                <th>Prénom</th>
-                <th>Adresse</th>
-            </tr></thead>
-            <tbody>
-            <tr>
-                <td data-label="Nom">James</td>
-                <td data-label="Prenom">blunt</td>
-                <td data-label="Adresse">5 rue marois</td>
-            </tr>
-            <tr>
-                <td data-label="Nom">Jill</td>
-                <td data-label="Prenom">boucher</td>
-                <td data-label="Adresse">10 rue machin</td>
-            </tr>
-            <tr>
-                <td data-label="Nom">Elyse</td>
-                <td data-label="Prenom">Lafayette</td>
-                <td data-label="Adresse">Rue pierre armand</td>
-            </tr>
-            </tbody>
+        <thead>
+        <tr><th>Nom</th>
+            <th>Prénom</th>
+            <th>Adresse</th>
+        </tr></thead>
+        <tbody>
+        {% for adherent in adherents %}
+        <tr>
+            <td data-label="Nom">{{ adherent.nomAdherent  }}</td>
+            <td data-label="Prenom">{{ adherent.prenomAdherent  }}</td>
+            <td data-label="Adresse">{{ adherent.adresseAdherent  }}</td>
+            <td data-label="Detail"><a href="{{ path('espace_bureau_sections_inscription_adherent_activite_alloc_maria_front_office_homepage', {'id':adherent.idAdherent}) }}" class="btn btn-primary">Choisir</a></td>
+        </tr>
+        </tbody>
+        {% endfor %}
         </table>
+
+
     </div>
 {% endblock %}

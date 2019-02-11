@@ -31,13 +31,13 @@
             <i class="divider"> / </i>
             <div class="active section" >Inscription de l'adhérent</div>
         </div>
-        <h1>Fiche d'inscription ma_section</h1><br/>
+        <h1>Fiche d'inscription {{ activites[0].idSection.nomSection  }}</h1><br/>
         <h2>Choix de(s) activité(s) de l'adhérent</h2>
     </div>
 
     <div id="bonj">
-        <h3><b>Adhérent : </b>Carl Boyer</h3><br/><br/>
-
+        <h3><b><U>Adhérent : </U></b>{{ details.nomAdherent }} {{ details.prenomAdherent }}</h3><br/><br/>
+        <!--
         <table class="ui celled table">
             <thead>
             <tr><th>Activité</th>
@@ -120,7 +120,41 @@
                 </td>
             </tr>
             </tbody>
+        </table>-->
+
+
+        <table class="ui celled table">
+            <thead>
+            <tr><th>Activité</th>
+                <th>Lieu</th>
+                <th>Jour</th>
+                <th>Horaire</th>
+                <th>Durée</th>
+                <th>Nombre de cours</th>
+                <th>Tarif</th>
+                <th>Choix</th>
+            </tr></thead>
+            <tbody>
+            {% for activite in activites %}
+            <tr>
+                <td data-label="Activite">{{ activite.nomActivite  }}</td>
+                <td data-label="Lieu">{{ activite.lieuActivite  }}</td>
+                <td data-label="Jour">{{ activite.jourActivite  }}</td>
+                <td data-label="Horaire">{{ activite.horaireActivite  }} </td>
+                <td data-label="Durée">{{ activite.dureeActivite  }} min</td>
+                <td data-label="Nombre de cours">{{ activite.nombreCoursActivite  }}</td>
+                <td data-label="Tarif">{{ activite.tarifActivite  }} €</td>
+                <td data-label="Choix">
+                    <div class="ui checkbox">
+                        <input type="checkbox" name="example">
+                        <label></label>
+                    </div>
+                </td>
+            </tr>
+            {% endfor %}
+            </tbody>
         </table>
+
 
         <p>Cotisation : 15€</p>
         <p>Adhésion : 0€</p>

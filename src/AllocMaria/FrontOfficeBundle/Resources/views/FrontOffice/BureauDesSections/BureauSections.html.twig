@@ -36,7 +36,11 @@
             <div class="active section" href="{{ path('espace_bureau_sections_alloc_maria_front_office_homepage') }}">Espace bureau des sections</div>
         </div>
 
-        <h1>Bonjour Toto</h1>
+        <h1>Bonjour
+            {% for res in ress %}
+                {{ res.prenomUser  }}
+            {% endfor %}
+        </h1>
     </div>
 
     <div id="bonj1">
@@ -73,5 +77,8 @@
 
         </div>
     </div>
+
+
+
 
 {% endblock %}

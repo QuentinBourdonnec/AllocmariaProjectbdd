@@ -26,7 +26,7 @@ espace_bureau_sections_liste_adherent_alloc_maria_front_office_homepage:
     defaults: { _controller: AllocMariaFrontOfficeBundle:Frontoffice:ListeAdherent }
 
 espace_bureau_sections_inscription_adherent_activite_alloc_maria_front_office_homepage:
-    path:     /EspaceBureauDesSections/ListeAdherent/InscriptionAdherentActivite
+    path:     /EspaceBureauDesSections/ListeAdherent/InscriptionAdherentActivite/{id}
     defaults: { _controller: AllocMariaFrontOfficeBundle:Frontoffice:InscriptionAdherentActivite }
 
 espace_bureau_sections_ma_section_alloc_maria_front_office_homepage:
