@@ -60,6 +60,8 @@ class FrontofficeController extends Controller
                     'identifiant_section'=> $identifiant_section,
                     'mdp_section'=> $mdp_section));
                 $res=$query->getResult();
+                $prenom = $res[0]->getLibelleTypeUser()->getLibelleTypeUser();
+                echo $prenom;
 
                 $query2 = $em->createQuery("SELECT 'IDENTITY(user.libelleTypeUser)' from AllocMariaFrontOfficeBundle:UserBureauAssociation user where user.identifiantUser=:identifiant_section AND user.mdpUser=:mdp_section");
                 $query2->setParameters(array(
@@ -68,16 +70,21 @@ class FrontofficeController extends Controller
                 $res2=$query2->getResult();
 
 
+
                 //$res1=$query1->getResult();
 
                 //$res = isset($res) ? $res : NULL;
                 //$res1 = isset($res1) ? $res1 : NULL;
 
                 $test=1;
-                if($test == 1){
+                if($prenom == 'Encaissement'){
+
+                    //$_SESSION['prenom'] = $res[''];
                     //$res=1;
                     //return $this->redirectToRoute('espace_bureau_sections_alloc_maria_front_office_homepage');
                     //return $this->render('AllocMariaFrontOfficeBundle:FrontOffice:accueil.html.twig',array("ress"=>$res, "form" => $form->createView()));
+
+
                     return $this->render('AllocMariaFrontOfficeBundle:FrontOffice\BureauDesSections:BureauSections.html.twig',array("ress"=>$res));
                 }
                 else
