@@ -1,0 +1,42 @@
+ModeDeReglement:
+    type: entity
+    table: mode_de_reglement
+    id:
+        mode:
+            type: string
+            nullable: false
+            length: 25
+            options:
+                fixed: false
+            id: true
+            column: Mode
+            generator:
+                strategy: IDENTITY
+    fields:
+        montantReglement:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: montant_reglement
+        validationReglement:
+            type: boolean
+            nullable: true
+            column: validation_reglement
+        informationsReglement:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: informations_reglement
+    manyToMany:
+        idReglement:
+            targetEntity: ReglementFamille
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: mode
+            inversedBy: null
+            joinTable: null
+            orderBy: null
+    lifecycleCallbacks: {  }

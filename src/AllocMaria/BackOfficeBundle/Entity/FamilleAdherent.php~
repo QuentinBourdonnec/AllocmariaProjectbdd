@@ -1,0 +1,48 @@
+<?php
+
+namespace AllocMaria\BackOfficeBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * FamilleAdherent
+ *
+ * @ORM\Table(name="famille_adherent")
+ * @ORM\Entity
+ */
+class FamilleAdherent
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id_famille", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idFamille;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     *
+     * @ORM\ManyToMany(targetEntity="ReglementFamille", inversedBy="idFamille")
+     * @ORM\JoinTable(name="effectue_le_reglement",
+     *   joinColumns={
+     *     @ORM\JoinColumn(name="id_famille", referencedColumnName="id_famille")
+     *   },
+     *   inverseJoinColumns={
+     *     @ORM\JoinColumn(name="id_reglement", referencedColumnName="id_reglement")
+     *   }
+     * )
+     */
+    private $idReglement;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->idReglement = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+}
+

@@ -1,0 +1,150 @@
+<?php
+
+namespace AllocMaria\FrontOfficeBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Adherent
+ *
+ * @ORM\Table(name="adherent", indexes={@ORM\Index(name="FK_adherent_id_famille", columns={"id_famille"})})
+ * @ORM\Entity
+ */
+class Adherent
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id_adherent", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idAdherent;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nom_adherent", type="string", length=25, nullable=false)
+     */
+    private $nomAdherent;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="prenom_adherent", type="string", length=25, nullable=false)
+     */
+    private $prenomAdherent;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="date_naissance_adherent", type="date", nullable=false)
+     */
+    private $dateNaissanceAdherent;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="adresse_adherent", type="string", length=40, nullable=false)
+     */
+    private $adresseAdherent;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="code_postal_adherent", type="integer", nullable=false)
+     */
+    private $codePostalAdherent;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="ville_adherent", type="string", length=40, nullable=false)
+     */
+    private $villeAdherent;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="tel_domicile_adherent", type="string", length=15, nullable=true)
+     */
+    private $telDomicileAdherent;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="tel_portable_adherent", type="string", length=15, nullable=true)
+     */
+    private $telPortableAdherent;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="mail_adherent", type="string", length=50, nullable=true)
+     */
+    private $mailAdherent;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="date_creation_adherent", type="date", nullable=true)
+     */
+    private $dateCreationAdherent;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="sexe_adherent", type="boolean", nullable=true)
+     */
+    private $sexeAdherent;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="numero_adherent", type="integer", nullable=true)
+     */
+    private $numeroAdherent;
+
+    /**
+     * @var \FamilleAdherent
+     *
+     * @ORM\ManyToOne(targetEntity="FamilleAdherent")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="id_famille", referencedColumnName="id_famille")
+     * })
+     */
+    private $idFamille;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     *
+     * @ORM\ManyToMany(targetEntity="ReferentAdherent", inversedBy="idAdherent")
+     * @ORM\JoinTable(name="mineurs_affilie_a",
+     *   joinColumns={
+     *     @ORM\JoinColumn(name="id_adherent", referencedColumnName="id_adherent")
+     *   },
+     *   inverseJoinColumns={
+     *     @ORM\JoinColumn(name="id_referent", referencedColumnName="id_referent")
+     *   }
+     * )
+     */
+    private $idReferent;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     *
+     * @ORM\ManyToMany(targetEntity="ActiviteSection", mappedBy="idAdherent")
+     */
+    private $idActivite;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->idReferent = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->idActivite = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+}
+

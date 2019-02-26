@@ -1,0 +1,107 @@
+<?php
+
+namespace AllocMaria\BackOfficeBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * ActiviteSection
+ *
+ * @ORM\Table(name="activite_section", indexes={@ORM\Index(name="FK_activite_section_id_section", columns={"id_section"})})
+ * @ORM\Entity
+ */
+class ActiviteSection
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id_activite", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idActivite;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nom_activite", type="string", length=25, nullable=false)
+     */
+    private $nomActivite;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="lieu_activite", type="string", length=25, nullable=true)
+     */
+    private $lieuActivite;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="jour_activite", type="string", length=25, nullable=true)
+     */
+    private $jourActivite;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="horaire_activite", type="string", length=25, nullable=true)
+     */
+    private $horaireActivite;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="duree_activite", type="string", length=25, nullable=true)
+     */
+    private $dureeActivite;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="tarif_activite", type="integer", nullable=true)
+     */
+    private $tarifActivite;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="nombre_cours_activite", type="integer", nullable=true)
+     */
+    private $nombreCoursActivite;
+
+    /**
+     * @var \Section
+     *
+     * @ORM\ManyToOne(targetEntity="Section")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="id_section", referencedColumnName="id_section")
+     * })
+     */
+    private $idSection;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     *
+     * @ORM\ManyToMany(targetEntity="Adherent", inversedBy="idActivite")
+     * @ORM\JoinTable(name="s_inscrit_a",
+     *   joinColumns={
+     *     @ORM\JoinColumn(name="id_activite", referencedColumnName="id_activite")
+     *   },
+     *   inverseJoinColumns={
+     *     @ORM\JoinColumn(name="id_adherent", referencedColumnName="id_adherent")
+     *   }
+     * )
+     */
+    private $idAdherent;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->idAdherent = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+}
+

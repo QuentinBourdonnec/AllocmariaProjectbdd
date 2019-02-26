@@ -1,0 +1,30 @@
+VersementReglement:
+    type: entity
+    table: versement_reglement
+    id:
+        idVersement:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: id_versement
+            generator:
+                strategy: IDENTITY
+    fields:
+        montantVersement:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: montant_versement
+    manyToMany:
+        idReglement:
+            targetEntity: ReglementFamille
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: idVersement
+            inversedBy: null
+            joinTable: null
+            orderBy: null
+    lifecycleCallbacks: {  }

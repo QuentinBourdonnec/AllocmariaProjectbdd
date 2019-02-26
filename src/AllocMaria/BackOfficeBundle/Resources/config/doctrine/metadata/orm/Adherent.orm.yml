@@ -1,0 +1,129 @@
+Adherent:
+    type: entity
+    table: adherent
+    indexes:
+        FK_adherent_id_famille:
+            columns:
+                - id_famille
+    id:
+        idAdherent:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: id_adherent
+            generator:
+                strategy: IDENTITY
+    fields:
+        nomAdherent:
+            type: string
+            nullable: false
+            length: 25
+            options:
+                fixed: false
+            column: nom_adherent
+        prenomAdherent:
+            type: string
+            nullable: false
+            length: 25
+            options:
+                fixed: false
+            column: prenom_adherent
+        dateNaissanceAdherent:
+            type: date
+            nullable: false
+            column: date_naissance_adherent
+        adresseAdherent:
+            type: string
+            nullable: false
+            length: 40
+            options:
+                fixed: false
+            column: adresse_adherent
+        codePostalAdherent:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: code_postal_adherent
+        villeAdherent:
+            type: string
+            nullable: false
+            length: 40
+            options:
+                fixed: false
+            column: ville_adherent
+        telDomicileAdherent:
+            type: string
+            nullable: true
+            length: 15
+            options:
+                fixed: false
+            column: tel_domicile_adherent
+        telPortableAdherent:
+            type: string
+            nullable: true
+            length: 15
+            options:
+                fixed: false
+            column: tel_portable_adherent
+        mailAdherent:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: mail_adherent
+        dateCreationAdherent:
+            type: date
+            nullable: true
+            column: date_creation_adherent
+        sexeAdherent:
+            type: boolean
+            nullable: true
+            column: sexe_adherent
+        numeroAdherent:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: numero_adherent
+    manyToOne:
+        idFamille:
+            targetEntity: FamilleAdherent
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id_famille:
+                    referencedColumnName: id_famille
+            orphanRemoval: false
+    manyToMany:
+        idReferent:
+            targetEntity: ReferentAdherent
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: idAdherent
+            joinTable:
+                name: mineurs_affilie_a
+                joinColumns:
+                    -
+                        name: id_adherent
+                        referencedColumnName: id_adherent
+                inverseJoinColumns:
+                    -
+                        name: id_referent
+                        referencedColumnName: id_referent
+            orderBy: null
+        idActivite:
+            targetEntity: ActiviteSection
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: idAdherent
+            inversedBy: null
+            joinTable: null
+            orderBy: null
+    lifecycleCallbacks: {  }

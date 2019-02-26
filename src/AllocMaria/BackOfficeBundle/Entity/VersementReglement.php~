@@ -1,0 +1,47 @@
+<?php
+
+namespace AllocMaria\BackOfficeBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * VersementReglement
+ *
+ * @ORM\Table(name="versement_reglement")
+ * @ORM\Entity
+ */
+class VersementReglement
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id_versement", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idVersement;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="montant_versement", type="integer", nullable=false)
+     */
+    private $montantVersement;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     *
+     * @ORM\ManyToMany(targetEntity="ReglementFamille", mappedBy="idVersement")
+     */
+    private $idReglement;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->idReglement = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+}
+

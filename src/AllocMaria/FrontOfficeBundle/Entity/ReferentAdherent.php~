@@ -1,0 +1,96 @@
+<?php
+
+namespace AllocMaria\FrontOfficeBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * ReferentAdherent
+ *
+ * @ORM\Table(name="referent_adherent")
+ * @ORM\Entity
+ */
+class ReferentAdherent
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id_referent", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idReferent;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="Nom_referent", type="string", length=25, nullable=false)
+     */
+    private $nomReferent;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="prenom_referent", type="string", length=25, nullable=false)
+     */
+    private $prenomReferent;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="telephone_referent", type="integer", nullable=true)
+     */
+    private $telephoneReferent;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="portable_referent", type="integer", nullable=true)
+     */
+    private $portableReferent;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="mail_referent", type="string", length=40, nullable=false)
+     */
+    private $mailReferent;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="adresse_referent", type="string", length=40, nullable=false)
+     */
+    private $adresseReferent;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="ville_referent", type="string", length=25, nullable=false)
+     */
+    private $villeReferent;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="code_postal_referent", type="integer", nullable=false)
+     */
+    private $codePostalReferent;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     *
+     * @ORM\ManyToMany(targetEntity="Adherent", mappedBy="idReferent")
+     */
+    private $idAdherent;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->idAdherent = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+}
+

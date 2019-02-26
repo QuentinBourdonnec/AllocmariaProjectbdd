@@ -1,0 +1,15 @@
+TypeSection:
+    type: entity
+    table: type_section
+    id:
+        libelleTypeSection:
+            type: string
+            nullable: false
+            length: 25
+            options:
+                fixed: false
+            id: true
+            column: libelle_type_section
+            generator:
+                strategy: IDENTITY
+    lifecycleCallbacks: {  }

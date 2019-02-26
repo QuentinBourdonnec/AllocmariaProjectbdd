@@ -1,0 +1,131 @@
+<?php
+
+namespace AllocMaria\BackOfficeBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * ReglementFamille
+ *
+ * @ORM\Table(name="reglement_famille", indexes={@ORM\Index(name="FK_reglement_famille_id_user", columns={"id_user"})})
+ * @ORM\Entity
+ */
+class ReglementFamille
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="id_reglement", type="string", length=25, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idReglement;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="total_reglement", type="integer", nullable=true)
+     */
+    private $totalReglement;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="saison_reglement", type="string", length=25, nullable=false)
+     */
+    private $saisonReglement;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="total_cotisation_reglement", type="integer", nullable=true)
+     */
+    private $totalCotisationReglement;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="total_adhesion_reglement", type="integer", nullable=true)
+     */
+    private $totalAdhesionReglement;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="reduction_adhesion_reglement", type="integer", nullable=true)
+     */
+    private $reductionAdhesionReglement;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="reduction_autre_reglement", type="integer", nullable=true)
+     */
+    private $reductionAutreReglement;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="motif_reduction_reglement", type="string", length=50, nullable=true)
+     */
+    private $motifReductionReglement;
+
+    /**
+     * @var \UserBureauAssociation
+     *
+     * @ORM\ManyToOne(targetEntity="UserBureauAssociation")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="id_user", referencedColumnName="id_user")
+     * })
+     */
+    private $idUser;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     *
+     * @ORM\ManyToMany(targetEntity="FamilleAdherent", mappedBy="idReglement")
+     */
+    private $idFamille;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     *
+     * @ORM\ManyToMany(targetEntity="ModeDeReglement", inversedBy="idReglement")
+     * @ORM\JoinTable(name="regle_avec",
+     *   joinColumns={
+     *     @ORM\JoinColumn(name="id_reglement", referencedColumnName="id_reglement")
+     *   },
+     *   inverseJoinColumns={
+     *     @ORM\JoinColumn(name="Mode", referencedColumnName="Mode")
+     *   }
+     * )
+     */
+    private $mode;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     *
+     * @ORM\ManyToMany(targetEntity="VersementReglement", inversedBy="idReglement")
+     * @ORM\JoinTable(name="verse",
+     *   joinColumns={
+     *     @ORM\JoinColumn(name="id_reglement", referencedColumnName="id_reglement")
+     *   },
+     *   inverseJoinColumns={
+     *     @ORM\JoinColumn(name="id_versement", referencedColumnName="id_versement")
+     *   }
+     * )
+     */
+    private $idVersement;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->idFamille = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->mode = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->idVersement = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+}
+

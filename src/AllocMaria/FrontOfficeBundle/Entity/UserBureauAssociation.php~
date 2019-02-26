@@ -1,0 +1,64 @@
+<?php
+
+namespace AllocMaria\FrontOfficeBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * UserBureauAssociation
+ *
+ * @ORM\Table(name="user_bureau_association", indexes={@ORM\Index(name="FK_user_bureau_association_libelle_type_user", columns={"libelle_type_user"})})
+ * @ORM\Entity
+ */
+class UserBureauAssociation
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id_user", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idUser;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nom_user", type="string", length=25, nullable=false)
+     */
+    private $nomUser;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="prenom_user", type="string", length=25, nullable=false)
+     */
+    private $prenomUser;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="identifiant_user", type="string", length=10, nullable=false)
+     */
+    private $identifiantUser;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="mdp_user", type="string", length=40, nullable=false)
+     */
+    private $mdpUser;
+
+    /**
+     * @var \TypeUser
+     *
+     * @ORM\ManyToOne(targetEntity="TypeUser")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="libelle_type_user", referencedColumnName="libelle_type_user")
+     * })
+     */
+    private $libelleTypeUser;
+
+
+}
+

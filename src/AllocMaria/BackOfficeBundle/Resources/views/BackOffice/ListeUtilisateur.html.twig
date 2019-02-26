@@ -9,6 +9,8 @@
             margin-right:20%;
             margin-bottom:4%;
         }
+
+
     </style>
 
 
@@ -19,12 +21,37 @@
             <i class="divider"> / </i>
             <a class="section" href="{{ path('espace_bureau_presidence_alloc_maria_back_office_homepage') }}">Espace bureau de la présidence</a>
             <i class="divider"> / </i>
-            <a class="section" href="{{ path('gestion_utilisateur_alloc_maria_back_office_homepage') }}">Gestion des utilisateurs</a>
+            <a class="section" href="{{ path('gestion_utilisateur_alloc_maria_back_office_homepage') }}">Gestion des responsables</a>
             <i class="divider"> / </i>
-            <div class="active section" >Liste des utilisateurs</div>
+            <div class="active section" >Liste des responsables</div>
         </div>
 
-        <h1>Liste des utilisateurs</h1>
+        <h1>Liste des responsables ({{ nb_users }} responsables)</h1>
+    </div>
+
+    <div class="bonj">
+        <!-- Affichage des utilisateurs -->
+        <table class="ui celled table">
+            <thead>
+            <tr><th>Nom</th>
+                <th>Prénom</th>
+                <th>Identifiant</th>
+                <th>Mot de passe</th>
+                <th>Libelle</th>
+            </tr></thead>
+            <tbody>
+            {% for user in users %}
+            <tr>
+                <td data-label="Nom">{{ user.nomUser  }}</td>
+                <td data-label="Prenom">{{ user.prenomUser  }}</td>
+                <td data-label="Adresse">{{ user.identifiantUser  }}</td>
+                <td data-label="Prenom">{{ user.mdpUser  }}</td>
+                <td data-label="Adresse">{{ user.mdpUser  }}</td>
+            </tr>
+            </tbody>
+            {% endfor %}
+        </table>
+
     </div>
 
 {% endblock %}

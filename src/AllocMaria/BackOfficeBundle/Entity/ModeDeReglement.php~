@@ -1,0 +1,61 @@
+<?php
+
+namespace AllocMaria\BackOfficeBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * ModeDeReglement
+ *
+ * @ORM\Table(name="mode_de_reglement")
+ * @ORM\Entity
+ */
+class ModeDeReglement
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="Mode", type="string", length=25, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $mode;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="montant_reglement", type="integer", nullable=true)
+     */
+    private $montantReglement;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="validation_reglement", type="boolean", nullable=true)
+     */
+    private $validationReglement;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="informations_reglement", type="string", length=50, nullable=true)
+     */
+    private $informationsReglement;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     *
+     * @ORM\ManyToMany(targetEntity="ReglementFamille", mappedBy="mode")
+     */
+    private $idReglement;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->idReglement = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+}
+

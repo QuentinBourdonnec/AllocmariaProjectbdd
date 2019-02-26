@@ -1,0 +1,967 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c9407995-0108-4115-abf3-b662370c05c6" name="Default Changelist" comment="2">
+      <change beforePath="$PROJECT_DIR$/src/AllocMaria/BackOfficeBundle/Controller/BackofficeController.php" afterPath="$PROJECT_DIR$/src/AllocMaria/BackOfficeBundle/Controller/BackofficeController.php" />
+      <change beforePath="$PROJECT_DIR$/src/AllocMaria/BackOfficeBundle/Resources/views/BackOffice/BureauPresidence.html.twig" afterPath="$PROJECT_DIR$/src/AllocMaria/BackOfficeBundle/Resources/views/BackOffice/BureauPresidence.html.twig" />
+      <change beforePath="$PROJECT_DIR$/src/AllocMaria/BackOfficeBundle/Resources/views/BackOffice/GestionUtilisateur.html.twig" afterPath="$PROJECT_DIR$/src/AllocMaria/BackOfficeBundle/Resources/views/BackOffice/GestionUtilisateur.html.twig" />
+      <change beforePath="$PROJECT_DIR$/src/AllocMaria/BackOfficeBundle/Resources/views/BackOffice/ListeAdherent.html.twig" afterPath="$PROJECT_DIR$/src/AllocMaria/BackOfficeBundle/Resources/views/BackOffice/ListeAdherent.html.twig" />
+      <change beforePath="$PROJECT_DIR$/src/AllocMaria/BackOfficeBundle/Resources/views/BackOffice/ListeUtilisateur.html.twig" afterPath="$PROJECT_DIR$/src/AllocMaria/BackOfficeBundle/Resources/views/BackOffice/ListeUtilisateur.html.twig" />
+      <change beforePath="$PROJECT_DIR$/src/AllocMaria/BackOfficeBundle/Resources/views/BackOffice/Statistiques.html.twig" afterPath="$PROJECT_DIR$/src/AllocMaria/BackOfficeBundle/Resources/views/BackOffice/Statistiques.html.twig" />
+      <change beforePath="$PROJECT_DIR$/src/AllocMaria/BackOfficeBundle/Resources/views/BackOffice/accueil.html.twig" afterPath="$PROJECT_DIR$/src/AllocMaria/BackOfficeBundle/Resources/views/BackOffice/accueil.html.twig" />
+      <change beforePath="$PROJECT_DIR$/src/AllocMaria/FrontOfficeBundle/Controller/FrontofficeController.php" afterPath="$PROJECT_DIR$/src/AllocMaria/FrontOfficeBundle/Controller/FrontofficeController.php" />
+      <change beforePath="$PROJECT_DIR$/src/AllocMaria/FrontOfficeBundle/Resources/views/FrontOffice/BureauDesSections/MaSection.html.twig" afterPath="$PROJECT_DIR$/src/AllocMaria/FrontOfficeBundle/Resources/views/FrontOffice/BureauDesSections/MaSection.html.twig" />
+      <change beforePath="$PROJECT_DIR$/src/AllocMaria/FrontOfficeBundle/Resources/views/FrontOffice/BureauDesSections/NouvelAdherent.html.twig" afterPath="$PROJECT_DIR$/src/AllocMaria/FrontOfficeBundle/Resources/views/FrontOffice/BureauDesSections/NouvelAdherent.html.twig" />
+      <change beforePath="$PROJECT_DIR$/src/AllocMaria/FrontOfficeBundle/Resources/views/FrontOffice/accueil.html.twig" afterPath="$PROJECT_DIR$/src/AllocMaria/FrontOfficeBundle/Resources/views/FrontOffice/accueil.html.twig" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="FrontofficeController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/AllocMaria/FrontOfficeBundle/Controller/FrontofficeController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2295">
+              <caret line="323" column="11" lean-forward="false" selection-start-line="323" selection-start-column="11" selection-end-line="323" selection-end-column="11" />
+              <folding>
+                <marker date="1550142707027" expanded="true" signature="1992:2141" ph="SELECT user AllocMariaFrontOfficeBundle" />
+                <marker date="1550142707027" expanded="true" signature="2755:3004" ph="SELECT secti... " />
+                <marker date="1550142707027" expanded="true" signature="5953:6112" ph="SELECT user AllocMariaFrontOfficeBundle" />
+                <marker date="1550142707027" expanded="true" signature="11049:11158" ph="SELECT adher... AllocMariaFrontOfficeBundle" />
+                <marker date="1550142707027" expanded="true" signature="11327:11439" ph="SELECT adher... AllocMariaFrontOfficeBundle" />
+                <marker date="1550142707027" expanded="true" signature="13358:13443" ph="SELECT act F... AllocMariaFrontOfficeBundle" />
+                <marker date="1550142707027" expanded="true" signature="13358:13444" ph="SELECT act F... AllocMariaFrontOfficeBundle" />
+                <marker date="1550142707027" expanded="true" signature="13486:13574" ph="SELECT act F... AllocMariaFrontOfficeBundle" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BackofficeController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AllocMaria/BackOfficeBundle/Controller/BackofficeController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2079">
+              <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+              <folding>
+                <marker date="1550249093742" expanded="true" signature="1540:1703" ph="SELECT user AllocMariaFrontOfficeBundle" />
+                <marker date="1550249093742" expanded="true" signature="4968:5067" ph="SELECT COUNT... AllocMariaBackOfficeBundle" />
+                <marker date="1550249093742" expanded="true" signature="5179:5282" ph="SELECT COUNT... AllocMariaBackOfficeBundle" />
+                <marker date="1550249093742" expanded="true" signature="5392:5487" ph="SELECT COUNT... AllocMariaBackOfficeBundle" />
+                <marker date="1550249093742" expanded="true" signature="6326:6425" ph="SELECT COUNT... AllocMariaBackOfficeBundle" />
+                <marker date="1550249093742" expanded="true" signature="8258:8359" ph="SELECT COUNT... AllocMariaBackOfficeBundle" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ListeAdherent.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AllocMaria/BackOfficeBundle/Resources/views/BackOffice/ListeAdherent.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="483">
+              <caret line="43" column="236" lean-forward="false" selection-start-line="43" selection-start-column="236" selection-end-line="43" selection-end-column="236" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>var</find>
+      <find>var/www</find>
+      <find>allocmaria_dtb</find>
+      <find>recg</find>
+      <find>rec</find>
+      <find>id</find>
+      <find>res</find>
+      <find>name</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/AllocMaria/BackOfficeBundle/AllocMariaBackOfficeBundle.php" />
+        <option value="$PROJECT_DIR$/src/AllocMaria/BackOfficeBundle/Resources/views/Default/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/AllocMaria/FrontOfficeBundle/Resources/views/Default/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/AllocMaria/FrontOfficeBundle/Resources/views/FrontOffice/accueil.html.twig.html" />
+        <option value="$PROJECT_DIR$/src/AllocMaria/FrontOfficeBundle/Resources/views/FrontOffice/BureauSections.html.twig" />
+        <option value="$PROJECT_DIR$/app/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/AllocMaria/FrontOfficeBundle/Resources/views/FrontOffice/BureauEncaissement/ReglementInscription.html.twig" />
+        <option value="$PROJECT_DIR$/src/AllocMaria/FrontOfficeBundle/Resources/views/FrontOffice/BureauEncaissement/BureauEncaissement.html.twig" />
+        <option value="$PROJECT_DIR$/src/AllocMaria/FrontOfficeBundle/Resources/views/FrontOffice/BureauEncaissement/ValidationInscription.html.twig" />
+        <option value="$PROJECT_DIR$/src/AllocMaria/FrontOfficeBundle/Resources/views/FrontOffice/BureauDesSections/NouvelAdherentMajeur.html.twig" />
+        <option value="$PROJECT_DIR$/src/AllocMaria/FrontOfficeBundle/Resources/views/FrontOffice/layout.html.twig" />
+        <option value="$PROJECT_DIR$/src/AllocMaria/FrontOfficeBundle/Resources/views/FrontOffice/footer.html.twig" />
+        <option value="$PROJECT_DIR$/app/config/config_dev.yml" />
+        <option value="$PROJECT_DIR$/src/AllocMaria/BackOfficeBundle/Resources/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/AllocMaria/FrontOfficeBundle/Resources/views/FrontOffice/header.html.twig" />
+        <option value="$PROJECT_DIR$/src/AllocMaria/BackOfficeBundle/Resources/views/BackOffice/CreationUtilisateur.html.twig" />
+        <option value="$PROJECT_DIR$/src/AllocMaria/BackOfficeBundle/Resources/views/BackOffice/GestionSection.html.twig" />
+        <option value="$PROJECT_DIR$/src/AllocMaria/BackOfficeBundle/Resources/views/BackOffice/SectionAdulte.html.twig" />
+        <option value="$PROJECT_DIR$/src/AllocMaria/BackOfficeBundle/Resources/views/BackOffice/SectionEnfant.html.twig" />
+        <option value="$PROJECT_DIR$/src/AllocMaria/BackOfficeBundle/Resources/views/BackOffice/Tresorerie.html.twig" />
+        <option value="$PROJECT_DIR$/app/config/parameters.yml.dist" />
+        <option value="$PROJECT_DIR$/app/config/parameters.yml" />
+        <option value="$PROJECT_DIR$/src/AllocMaria/FrontOfficeBundle/Resources/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/AllocMaria/FrontOfficeBundle/Form/adherentType.php" />
+        <option value="$PROJECT_DIR$/src/AllocMaria/FrontOfficeBundle/Resources/views/FrontOffice/BureauDesSections/InscriptionAdherentActivite.html.twig" />
+        <option value="$PROJECT_DIR$/src/AllocMaria/FrontOfficeBundle/Form/AdherentType.php" />
+        <option value="$PROJECT_DIR$/src/AllocMaria/FrontOfficeBundle/Resources/views/FrontOffice/BureauDesSections/NouvelAdherentMineur.html.twig" />
+        <option value="$PROJECT_DIR$/src/AllocMaria/FrontOfficeBundle/Entity/UserBureauAssociation.php" />
+        <option value="$PROJECT_DIR$/src/AllocMaria/FrontOfficeBundle/Resources/views/FrontOffice/BureauDesSections/BureauSections.html.twig" />
+        <option value="$PROJECT_DIR$/src/AllocMaria/FrontOfficeBundle/Resources/views/FrontOffice/BureauDesSections/ListeAdherent.html.twig" />
+        <option value="$PROJECT_DIR$/src/AllocMaria/BackOfficeBundle/Resources/views/BackOffice/accueil.html.twig" />
+        <option value="$PROJECT_DIR$/src/AllocMaria/BackOfficeBundle/Resources/views/BackOffice/Statistiques.html.twig" />
+        <option value="$PROJECT_DIR$/src/AllocMaria/BackOfficeBundle/Resources/views/BackOffice/BureauPresidence.html.twig" />
+        <option value="$PROJECT_DIR$/src/AllocMaria/BackOfficeBundle/Resources/views/BackOffice/GestionUtilisateur.html.twig" />
+        <option value="$PROJECT_DIR$/src/AllocMaria/BackOfficeBundle/Resources/views/BackOffice/ListeUtilisateur.html.twig" />
+        <option value="$PROJECT_DIR$/src/AllocMaria/FrontOfficeBundle/Resources/views/FrontOffice/accueil.html.twig" />
+        <option value="$PROJECT_DIR$/src/AllocMaria/FrontOfficeBundle/Resources/views/FrontOffice/BureauDesSections/NouvelAdherent.html.twig" />
+        <option value="$PROJECT_DIR$/src/AllocMaria/FrontOfficeBundle/Resources/views/FrontOffice/BureauDesSections/MaSection.html.twig" />
+        <option value="$PROJECT_DIR$/src/AllocMaria/FrontOfficeBundle/Controller/FrontofficeController.php" />
+        <option value="$PROJECT_DIR$/src/AllocMaria/BackOfficeBundle/Controller/BackofficeController.php" />
+        <option value="$PROJECT_DIR$/src/AllocMaria/BackOfficeBundle/Resources/views/BackOffice/ListeAdherent.html.twig" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/vendor/sensio/framework-extra-bundle" />
+      <path value="$PROJECT_DIR$/vendor/sensio/distribution-bundle" />
+      <path value="$PROJECT_DIR$/vendor/sensio/generator-bundle" />
+      <path value="$PROJECT_DIR$/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-apcu" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-icu" />
+      <path value="$PROJECT_DIR$/vendor/symfony/swiftmailer-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php56" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-util" />
+      <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/monolog-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/symfony" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php70" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/common" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/orm" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/vendor/symfony/phpunit-bridge" />
+      <path value="$PROJECT_DIR$/vendor/sensiolabs/security-checker" />
+      <path value="$PROJECT_DIR$/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/jdorn/sql-formatter" />
+      <path value="$PROJECT_DIR$/vendor/incenteev/composer-parameter-handler" />
+    </include_path>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1048" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="AllocmariaProjectbdd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AllocmariaProjectbdd" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="AllocmariaProjectbdd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AllocmariaProjectbdd" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="AllocmariaProjectbdd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AllocmariaProjectbdd" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="AllocmariaProjectbdd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AllocmariaProjectbdd" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="AllocmariaProjectbdd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AllocmariaProjectbdd" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="AllocMaria" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="AllocmariaProjectbdd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AllocmariaProjectbdd" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="AllocMaria" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="BackOfficeBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="AllocmariaProjectbdd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AllocmariaProjectbdd" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="AllocMaria" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="BackOfficeBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="AllocmariaProjectbdd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AllocmariaProjectbdd" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="AllocMaria" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="BackOfficeBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Entity" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="AllocmariaProjectbdd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AllocmariaProjectbdd" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="AllocMaria" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="BackOfficeBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="AllocmariaProjectbdd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AllocmariaProjectbdd" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="AllocMaria" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="BackOfficeBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="AllocmariaProjectbdd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AllocmariaProjectbdd" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="AllocMaria" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="BackOfficeBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="BackOffice" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="AllocmariaProjectbdd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AllocmariaProjectbdd" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="AllocMaria" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="FrontOfficeBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="AllocmariaProjectbdd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AllocmariaProjectbdd" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="AllocMaria" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="FrontOfficeBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;null&#9;null&#10;file_get_contents&#9;null&#9;null&#10;var/&#9;FILE&#9;file://C:/wamp64/www/AllocmariaProject/node_modules/jquery/src/var" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\AllocmariaProjectbdd\src\AllocMaria\FrontOfficeBundle\Form" />
+      <recent name="$PROJECT_DIR$/src/AllocMaria/FrontOfficeBundle/Resources/views/FrontOffice" />
+      <recent name="$PROJECT_DIR$/web" />
+      <recent name="$PROJECT_DIR$/web/images" />
+      <recent name="$PROJECT_DIR$/web/style" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\AllocmariaProject\web" />
+      <recent name="$PROJECT_DIR$/src/AllocMaria/FrontOfficeBundle/Resources/views/FrontOffice/BureauDesSections" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c9407995-0108-4115-abf3-b662370c05c6" name="Default Changelist" comment="" />
+      <created>1547135980477</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1547135980477</updated>
+      <workItem from="1547135983093" duration="53769000" />
+      <workItem from="1548344522452" duration="4292000" />
+      <workItem from="1548406582546" duration="9863000" />
+      <workItem from="1549273590840" duration="2483000" />
+      <workItem from="1549283852941" duration="6196000" />
+      <workItem from="1549290713831" duration="796000" />
+      <workItem from="1549291873714" duration="13502000" />
+      <workItem from="1549439108917" duration="20506000" />
+      <workItem from="1549534178493" duration="6504000" />
+      <workItem from="1549876635853" duration="28812000" />
+      <workItem from="1549962560870" duration="107000" />
+      <workItem from="1549970737254" duration="744000" />
+      <workItem from="1549974236461" duration="7931000" />
+      <workItem from="1550245532247" duration="5000" />
+      <workItem from="1550245669844" duration="24000" />
+      <workItem from="1550245724400" duration="7000" />
+      <workItem from="1550245966626" duration="42000" />
+      <workItem from="1550246156062" duration="35000" />
+      <workItem from="1550246219238" duration="4000" />
+      <workItem from="1550246258901" duration="28000" />
+      <workItem from="1550246312993" duration="39000" />
+      <workItem from="1550246371401" duration="31000" />
+      <workItem from="1550246420125" duration="33000" />
+      <workItem from="1550246666567" duration="4000" />
+      <workItem from="1550246750385" duration="3000" />
+      <workItem from="1550246785786" duration="2000" />
+      <workItem from="1550246824703" duration="2000" />
+      <workItem from="1550247105487" duration="1537000" />
+    </task>
+    <task id="LOCAL-00001" summary="1">
+      <created>1547208314467</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1547208314471</updated>
+    </task>
+    <task id="LOCAL-00002" summary="1">
+      <created>1547209916246</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1547209916246</updated>
+    </task>
+    <task id="LOCAL-00003" summary="2">
+      <created>1548333399475</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1548333399476</updated>
+    </task>
+    <task id="LOCAL-00004" summary="2">
+      <created>1548363426503</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1548363426504</updated>
+    </task>
+    <task id="LOCAL-00005" summary="2">
+      <created>1548364407246</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1548364407246</updated>
+    </task>
+    <task id="LOCAL-00006" summary="2">
+      <created>1548365206923</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1548365206924</updated>
+    </task>
+    <task id="LOCAL-00007" summary="2">
+      <created>1548365363505</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1548365363505</updated>
+    </task>
+    <task id="LOCAL-00008" summary="2">
+      <created>1548365725434</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1548365725434</updated>
+    </task>
+    <task id="LOCAL-00009" summary="2">
+      <created>1548365816743</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1548365816743</updated>
+    </task>
+    <task id="LOCAL-00010" summary="2">
+      <created>1548365915159</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1548365915159</updated>
+    </task>
+    <task id="LOCAL-00011" summary="2">
+      <created>1548366740543</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1548366740543</updated>
+    </task>
+    <task id="LOCAL-00012" summary="2">
+      <created>1548366790526</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1548366790526</updated>
+    </task>
+    <task id="LOCAL-00013" summary="2">
+      <created>1548366916397</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1548366916397</updated>
+    </task>
+    <task id="LOCAL-00014" summary="2">
+      <created>1549276320274</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1549276320274</updated>
+    </task>
+    <task id="LOCAL-00015" summary="2">
+      <created>1549877859046</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1549877859046</updated>
+    </task>
+    <task id="LOCAL-00016" summary="2">
+      <created>1549882448325</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1549882448325</updated>
+    </task>
+    <task id="LOCAL-00017" summary="2">
+      <created>1549901618781</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1549901618781</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="157301000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2792696" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21857305" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.037372593" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22771214" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="1" />
+    <MESSAGE value="2" />
+    <option name="LAST_COMMIT_MESSAGE" value="2" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/config/security.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/services.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AllocMaria/FrontOfficeBundle/Resources/views/FrontOffice/BureauDesSections/NouvelAdherentMajeur.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="70" column="12" lean-forward="false" selection-start-line="70" selection-start-column="12" selection-end-line="86" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/phpstorm.jar!/resources/html5-schema/html5/web-forms.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="503" column="16" lean-forward="false" selection-start-line="503" selection-start-column="16" selection-end-line="503" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AllocMaria/BackOfficeBundle/AllocMariaBackOfficeBundle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AllocMaria/FrontOfficeBundle/AllocMariaFrontOfficeBundle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AllocMaria/FrontOfficeBundle/Resources/views/FrontOffice/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="16" column="7" lean-forward="false" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AllocMaria/BackOfficeBundle/Resources/views/BackOffice/SectionAdulte.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="4" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="27" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AllocMaria/BackOfficeBundle/Resources/views/BackOffice/SectionEnfant.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="26" column="28" lean-forward="false" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config_prod.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config_dev.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml.dist">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="24" lean-forward="false" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AllocMaria/BackOfficeBundle/Resources/views/BackOffice/Tresorerie.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="27" column="14" lean-forward="false" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/AppCache.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/config/router_dev.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AllocMaria/BackOfficeBundle/Entity/ActiviteSection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="142" column="6" lean-forward="false" selection-start-line="142" selection-start-column="6" selection-end-line="142" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/images/favicons.ico">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AllocMaria/FrontOfficeBundle/Resources/views/FrontOffice/header.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="23" column="50" lean-forward="false" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AllocMaria/BackOfficeBundle/Form/AdherentType.php" />
+    <entry file="file://$PROJECT_DIR$/src/AllocMaria/FrontOfficeBundle/Entity/ActiviteSection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="81" column="0" lean-forward="false" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AllocMaria/FrontOfficeBundle/Entity/Adherent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3738">
+          <caret line="178" column="20" lean-forward="false" selection-start-line="178" selection-start-column="20" selection-end-line="178" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AllocMaria/FrontOfficeBundle/Resources/views/FrontOffice/BureauDesSections/NouvelAdherentMineur.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1491">
+          <caret line="71" column="39" lean-forward="false" selection-start-line="71" selection-start-column="39" selection-end-line="71" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AllocMaria/FrontOfficeBundle/Entity/TypeSection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-39">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AllocMaria/FrontOfficeBundle/Entity/Section.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="26" column="28" lean-forward="false" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AllocMaria/FrontOfficeBundle/Entity/TypeUser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-18">
+          <caret line="35" column="7" lean-forward="false" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AllocMaria/FrontOfficeBundle/Entity/UserBureauAssociation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="556">
+          <caret line="42" column="13" lean-forward="false" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AllocMaria/BackOfficeBundle/Resources/views/BackOffice/Statistiques.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="651">
+          <caret line="31" column="46" lean-forward="false" selection-start-line="31" selection-start-column="46" selection-end-line="31" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="31" lean-forward="false" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AllocMaria/BackOfficeBundle/Resources/views/BackOffice/CreationUtilisateur.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="18" column="37" lean-forward="false" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AllocMaria/BackOfficeBundle/Resources/views/BackOffice/GestionSection.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="21" column="61" lean-forward="false" selection-start-line="21" selection-start-column="61" selection-end-line="21" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AllocMaria/BackOfficeBundle/Resources/views/BackOffice/GestionUtilisateur.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="23" column="9" lean-forward="false" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AllocMaria/BackOfficeBundle/Resources/views/BackOffice/accueil.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="990">
+          <caret line="80" column="74" lean-forward="false" selection-start-line="80" selection-start-column="74" selection-end-line="80" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AllocMaria/FrontOfficeBundle/Resources/views/FrontOffice/BureauDesSections/ListeAdherent.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1449">
+          <caret line="69" column="15" lean-forward="false" selection-start-line="69" selection-start-column="15" selection-end-line="69" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AllocMaria/BackOfficeBundle/Resources/views/BackOffice/BureauPresidence.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="8" lean-forward="false" selection-start-line="6" selection-start-column="8" selection-end-line="11" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AllocMaria/BackOfficeBundle/Resources/views/BackOffice/ListeUtilisateur.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="482">
+          <caret line="37" column="36" lean-forward="false" selection-start-line="37" selection-start-column="36" selection-end-line="37" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AllocMaria/FrontOfficeBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="41" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AllocMaria/BackOfficeBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="40" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AllocMaria/FrontOfficeBundle/Form/AdherentType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="17" column="55" lean-forward="false" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AllocMaria/FrontOfficeBundle/Resources/views/FrontOffice/accueil.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3171">
+          <caret line="151" column="53" lean-forward="false" selection-start-line="151" selection-start-column="53" selection-end-line="151" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AllocMaria/FrontOfficeBundle/Resources/views/FrontOffice/BureauDesSections/MaSection.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="25" column="47" lean-forward="false" selection-start-line="25" selection-start-column="47" selection-end-line="25" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AllocMaria/FrontOfficeBundle/Resources/views/FrontOffice/BureauDesSections/BureauSections.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="819">
+          <caret line="39" column="12" lean-forward="false" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AllocMaria/FrontOfficeBundle/Resources/views/FrontOffice/BureauDesSections/InscriptionAdherentActivite.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="28" column="34" lean-forward="false" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AllocMaria/BackOfficeBundle/Entity/TypeUser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="587">
+          <caret line="31" column="13" lean-forward="false" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AllocMaria/BackOfficeBundle/Entity/Section.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="587">
+          <caret line="47" column="20" lean-forward="false" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AllocMaria/FrontOfficeBundle/Resources/views/FrontOffice/BureauDesSections/NouvelAdherent.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="902">
+          <caret line="99" column="22" lean-forward="true" selection-start-line="99" selection-start-column="22" selection-end-line="99" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AllocMaria/BackOfficeBundle/Controller/BackofficeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2079">
+          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding>
+            <marker date="1550249093742" expanded="true" signature="1540:1703" ph="SELECT user AllocMariaFrontOfficeBundle" />
+            <marker date="1550249093742" expanded="true" signature="4968:5067" ph="SELECT COUNT... AllocMariaBackOfficeBundle" />
+            <marker date="1550249093742" expanded="true" signature="5179:5282" ph="SELECT COUNT... AllocMariaBackOfficeBundle" />
+            <marker date="1550249093742" expanded="true" signature="5392:5487" ph="SELECT COUNT... AllocMariaBackOfficeBundle" />
+            <marker date="1550249093742" expanded="true" signature="6326:6425" ph="SELECT COUNT... AllocMariaBackOfficeBundle" />
+            <marker date="1550249093742" expanded="true" signature="8258:8359" ph="SELECT COUNT... AllocMariaBackOfficeBundle" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AllocMaria/BackOfficeBundle/Resources/views/BackOffice/ListeAdherent.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="43" column="236" lean-forward="false" selection-start-line="43" selection-start-column="236" selection-end-line="43" selection-end-column="236" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AllocMaria/FrontOfficeBundle/Controller/FrontofficeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2295">
+          <caret line="323" column="11" lean-forward="false" selection-start-line="323" selection-start-column="11" selection-end-line="323" selection-end-column="11" />
+          <folding>
+            <marker date="1550142707027" expanded="true" signature="1992:2141" ph="SELECT user AllocMariaFrontOfficeBundle" />
+            <marker date="1550142707027" expanded="true" signature="2755:3004" ph="SELECT secti... " />
+            <marker date="1550142707027" expanded="true" signature="5953:6112" ph="SELECT user AllocMariaFrontOfficeBundle" />
+            <marker date="1550142707027" expanded="true" signature="11049:11158" ph="SELECT adher... AllocMariaFrontOfficeBundle" />
+            <marker date="1550142707027" expanded="true" signature="11327:11439" ph="SELECT adher... AllocMariaFrontOfficeBundle" />
+            <marker date="1550142707027" expanded="true" signature="13358:13443" ph="SELECT act F... AllocMariaFrontOfficeBundle" />
+            <marker date="1550142707027" expanded="true" signature="13358:13444" ph="SELECT act F... AllocMariaFrontOfficeBundle" />
+            <marker date="1550142707027" expanded="true" signature="13486:13574" ph="SELECT act F... AllocMariaFrontOfficeBundle" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
