@@ -64,27 +64,30 @@
     </script>
 
 
+
     <div class="bonj">
         <form class="ui form">
 
 
             <div class="required inline field">
-                <label>Nom :</label><p></p>
+
+                <label>Nom :</label><p>{{ session.nomAdherent }}</p>
+
             </div>
             <div class="required inline field">
-                <label>Prénom :</label><p>Quentin</p>
+                <label>Prénom :</label><p>{{ session.prenomAdherent }}</p>
             </div>
             <div class="required inline field">
-                <label>Adresse :</label><p>5 rue cuirassé bretagne</p>
+                <label>Adresse :</label><p>{{ session.adresseAdherent }}</p>
             </div>
             <div class="required inline field">
-                <label>Ville :</label><p>BREST</p>
+                <label>Ville :</label><p>{{ session.villeAdherent }}</p>
             </div>
             <div class="required inline field">
-                <label>Code postal :</label><p>29200</p>
+                <label>Code postal :</label><p>{{ session.codePostalAdherent }}</p>
             </div>
             <div class="required inline field">
-                <label>Date naissance :</label><p>10/07/1997</p>
+                <label>Date naissance :</label><p>{{ session.nomAdherent }}</p>
             </div><br/>
 
 

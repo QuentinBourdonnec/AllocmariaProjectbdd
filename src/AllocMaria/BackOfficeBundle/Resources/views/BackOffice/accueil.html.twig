@@ -48,6 +48,8 @@
                                 </div>
                             </div>
                         </div>
+
+                        <!--
                         <div class="field">
                             <label>Identifiant</label>
                             <div class="ui left icon input">
@@ -62,7 +64,29 @@
                                 <i class="lock icon"></i>
                             </div>
                         </div>
-                        <div class="ui blue submit button" onclick="toggle('alert1')">Se connecter</div>
+                        <div class="ui blue submit button" onclick="toggle('alert1')">Se connecter</div>-->
+
+                        <div class="field">
+                            {{ form_start(form) }}
+                            <label>Identifiant</label>
+                            <div class="fields">
+                                <div class="field">
+                                    {{ form_widget(form.identifiant_administration, { 'attr': {'class': 'prompt', 'placeholder': 'Identifiant'} }) }}
+                                    <!--<input type="text"  placeholder="Identifiant">-->
+                                </div>
+                            </div>
+                            <label>Mot de passe</label>
+                            <div class="fields">
+                                <div class="field">
+                                    {{ form_widget(form.mdp_administration, { 'attr': {'class': 'prompt', 'placeholder': 'Mot de passe'} }) }}
+                                    <!--<input type="password" placeholder="Mot de passe">-->
+                                </div>
+                            </div>
+                            <input class="ui primary button" name="action" type="submit" value="Connexion" />
+                            {{ form_end(form) }}
+
+                        </div>
+
                     </div>
                 </div>
 

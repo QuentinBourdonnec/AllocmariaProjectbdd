@@ -19,10 +19,33 @@
             <i class="divider"> / </i>
             <a class="section" href="{{ path('espace_bureau_presidence_alloc_maria_back_office_homepage') }}">Espace bureau de la présidence</a>
             <i class="divider"> / </i>
-            <div class="active section" >Liste des adhérents</div>
+            <div class="active section" >Liste des adhérents </div>
         </div>
 
-        <h1>Liste des adhérents</h1>
+        <h1>Liste des adhérents ({{ nb_adherents }} adhérents)</h1>
+    </div>
+
+    <div class="bonj">
+    <!-- Affichage des adhérents -->
+        <!-- Affichage des adhérents -->
+        <table class="ui celled table">
+            <thead>
+            <tr><th>Nom</th>
+                <th>Prénom</th>
+                <th>Informations inscriptions</th>
+                <th>Informations personnelles</th>
+            </tr></thead>
+            <tbody>
+            {% for adherent in adherents %}
+            <tr>
+                <td data-label="Nom">{{ adherent.nomAdherent  }}</td>
+                <td data-label="Prenom">{{ adherent.prenomAdherent  }}</td>
+                <td data-label="Informations inscriptions"><a href="{{ path('espace_bureau_sections_inscription_adherent_activite_alloc_maria_front_office_homepage', {'id':adherent.idAdherent}) }}" class="btn btn-primary">Voir les activités</a></td>
+                <td data-label="Informations personnelles"><a href="{{ path('espace_bureau_sections_inscription_adherent_activite_alloc_maria_front_office_homepage', {'id':adherent.idAdherent}) }}" class="btn btn-primary">Voir les infos</a></td>
+            </tr>
+            </tbody>
+            {% endfor %}
+        </table>
     </div>
 
 {% endblock %}
