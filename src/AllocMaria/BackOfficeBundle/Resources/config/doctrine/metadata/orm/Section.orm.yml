@@ -1,0 +1,37 @@
+Section:
+    type: entity
+    table: section
+    indexes:
+        FK_section_libelle_type_section:
+            columns:
+                - libelle_type_section
+    id:
+        idSection:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: id_section
+            generator:
+                strategy: IDENTITY
+    fields:
+        nomSection:
+            type: string
+            nullable: false
+            length: 25
+            options:
+                fixed: false
+            column: nom_section
+    manyToOne:
+        libelleTypeSection:
+            targetEntity: TypeSection
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                libelle_type_section:
+                    referencedColumnName: libelle_type_section
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

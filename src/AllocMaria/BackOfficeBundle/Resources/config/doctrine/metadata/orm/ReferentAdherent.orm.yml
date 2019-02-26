@@ -1,0 +1,77 @@
+ReferentAdherent:
+    type: entity
+    table: referent_adherent
+    id:
+        idReferent:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: id_referent
+            generator:
+                strategy: IDENTITY
+    fields:
+        nomReferent:
+            type: string
+            nullable: false
+            length: 25
+            options:
+                fixed: false
+            column: Nom_referent
+        prenomReferent:
+            type: string
+            nullable: false
+            length: 25
+            options:
+                fixed: false
+            column: prenom_referent
+        telephoneReferent:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: telephone_referent
+        portableReferent:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: portable_referent
+        mailReferent:
+            type: string
+            nullable: false
+            length: 40
+            options:
+                fixed: false
+            column: mail_referent
+        adresseReferent:
+            type: string
+            nullable: false
+            length: 40
+            options:
+                fixed: false
+            column: adresse_referent
+        villeReferent:
+            type: string
+            nullable: false
+            length: 25
+            options:
+                fixed: false
+            column: ville_referent
+        codePostalReferent:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: code_postal_referent
+    manyToMany:
+        idAdherent:
+            targetEntity: Adherent
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: idReferent
+            inversedBy: null
+            joinTable: null
+            orderBy: null
+    lifecycleCallbacks: {  }

@@ -1,0 +1,118 @@
+ReglementFamille:
+    type: entity
+    table: reglement_famille
+    indexes:
+        FK_reglement_famille_id_user:
+            columns:
+                - id_user
+    id:
+        idReglement:
+            type: string
+            nullable: false
+            length: 25
+            options:
+                fixed: false
+            id: true
+            column: id_reglement
+            generator:
+                strategy: IDENTITY
+    fields:
+        totalReglement:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: total_reglement
+        saisonReglement:
+            type: string
+            nullable: false
+            length: 25
+            options:
+                fixed: false
+            column: saison_reglement
+        totalCotisationReglement:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: total_cotisation_reglement
+        totalAdhesionReglement:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: total_adhesion_reglement
+        reductionAdhesionReglement:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: reduction_adhesion_reglement
+        reductionAutreReglement:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: reduction_autre_reglement
+        motifReductionReglement:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: motif_reduction_reglement
+    manyToOne:
+        idUser:
+            targetEntity: UserBureauAssociation
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id_user:
+                    referencedColumnName: id_user
+            orphanRemoval: false
+    manyToMany:
+        idFamille:
+            targetEntity: FamilleAdherent
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: idReglement
+            inversedBy: null
+            joinTable: null
+            orderBy: null
+        mode:
+            targetEntity: ModeDeReglement
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: idReglement
+            joinTable:
+                name: regle_avec
+                joinColumns:
+                    -
+                        name: id_reglement
+                        referencedColumnName: id_reglement
+                inverseJoinColumns:
+                    -
+                        name: Mode
+                        referencedColumnName: Mode
+            orderBy: null
+        idVersement:
+            targetEntity: VersementReglement
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: idReglement
+            joinTable:
+                name: verse
+                joinColumns:
+                    -
+                        name: id_reglement
+                        referencedColumnName: id_reglement
+                inverseJoinColumns:
+                    -
+                        name: id_versement
+                        referencedColumnName: id_versement
+            orderBy: null
+    lifecycleCallbacks: {  }

@@ -1,0 +1,58 @@
+UserBureauAssociation:
+    type: entity
+    table: user_bureau_association
+    indexes:
+        FK_user_bureau_association_libelle_type_user:
+            columns:
+                - libelle_type_user
+    id:
+        idUser:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: id_user
+            generator:
+                strategy: IDENTITY
+    fields:
+        nomUser:
+            type: string
+            nullable: false
+            length: 25
+            options:
+                fixed: false
+            column: nom_user
+        prenomUser:
+            type: string
+            nullable: false
+            length: 25
+            options:
+                fixed: false
+            column: prenom_user
+        identifiantUser:
+            type: string
+            nullable: false
+            length: 10
+            options:
+                fixed: false
+            column: identifiant_user
+        mdpUser:
+            type: string
+            nullable: false
+            length: 40
+            options:
+                fixed: false
+            column: mdp_user
+    manyToOne:
+        libelleTypeUser:
+            targetEntity: TypeUser
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                libelle_type_user:
+                    referencedColumnName: libelle_type_user
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

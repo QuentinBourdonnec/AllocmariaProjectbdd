@@ -1,0 +1,30 @@
+TypeUser:
+    type: entity
+    table: type_user
+    indexes:
+        FK_type_user_id_section:
+            columns:
+                - id_section
+    id:
+        libelleTypeUser:
+            type: string
+            nullable: false
+            length: 25
+            options:
+                fixed: false
+            id: true
+            column: libelle_type_user
+            generator:
+                strategy: IDENTITY
+    manyToOne:
+        idSection:
+            targetEntity: Section
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id_section:
+                    referencedColumnName: id_section
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

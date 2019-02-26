@@ -1,0 +1,95 @@
+ActiviteSection:
+    type: entity
+    table: activite_section
+    indexes:
+        FK_activite_section_id_section:
+            columns:
+                - id_section
+    id:
+        idActivite:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: id_activite
+            generator:
+                strategy: IDENTITY
+    fields:
+        nomActivite:
+            type: string
+            nullable: false
+            length: 25
+            options:
+                fixed: false
+            column: nom_activite
+        lieuActivite:
+            type: string
+            nullable: true
+            length: 25
+            options:
+                fixed: false
+            column: lieu_activite
+        jourActivite:
+            type: string
+            nullable: true
+            length: 25
+            options:
+                fixed: false
+            column: jour_activite
+        horaireActivite:
+            type: string
+            nullable: true
+            length: 25
+            options:
+                fixed: false
+            column: horaire_activite
+        dureeActivite:
+            type: string
+            nullable: true
+            length: 25
+            options:
+                fixed: false
+            column: duree_activite
+        tarifActivite:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: tarif_activite
+        nombreCoursActivite:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: nombre_cours_activite
+    manyToOne:
+        idSection:
+            targetEntity: Section
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id_section:
+                    referencedColumnName: id_section
+            orphanRemoval: false
+    manyToMany:
+        idAdherent:
+            targetEntity: Adherent
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: idActivite
+            joinTable:
+                name: s_inscrit_a
+                joinColumns:
+                    -
+                        name: id_activite
+                        referencedColumnName: id_activite
+                inverseJoinColumns:
+                    -
+                        name: id_adherent
+                        referencedColumnName: id_adherent
+            orderBy: null
+    lifecycleCallbacks: {  }

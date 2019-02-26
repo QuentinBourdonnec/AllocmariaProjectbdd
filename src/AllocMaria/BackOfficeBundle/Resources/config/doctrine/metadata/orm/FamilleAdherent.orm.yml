@@ -1,0 +1,32 @@
+FamilleAdherent:
+    type: entity
+    table: famille_adherent
+    id:
+        idFamille:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: id_famille
+            generator:
+                strategy: IDENTITY
+    manyToMany:
+        idReglement:
+            targetEntity: ReglementFamille
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: idFamille
+            joinTable:
+                name: effectue_le_reglement
+                joinColumns:
+                    -
+                        name: id_famille
+                        referencedColumnName: id_famille
+                inverseJoinColumns:
+                    -
+                        name: id_reglement
+                        referencedColumnName: id_reglement
+            orderBy: null
+    lifecycleCallbacks: {  }
