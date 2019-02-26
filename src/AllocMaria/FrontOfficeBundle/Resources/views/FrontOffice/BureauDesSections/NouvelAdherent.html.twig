@@ -95,7 +95,7 @@
         </form>
 
     </div>
-
+    {##}
     {{ form_start(form) }}
     <div class="bonj">
         <form class="ui form">
@@ -107,8 +107,8 @@
             </div>
 
             <div class="required inline field">
-                {{ form_label(form.nomAdherent, 'Nom adhérent :', {'label_attr': {'class': 'foo'}}) }}
-                {#{{ form_row(form.nomAdherent) }}#}
+                {#{{ form_label(form.nomAdherent, 'Nom adhérent :', {'label_attr': {'class': 'foo'}}) }}#}
+                {{ form_row(form.nomAdherent) }}
             </div>
 
             <div class="required inline field">
