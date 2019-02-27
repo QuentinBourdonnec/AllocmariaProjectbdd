@@ -15,6 +15,13 @@
             margin-right:20%;
             margin-bottom:4%;
         }
+
+        .co1
+        {
+            margin-left:20%;
+            margin-right:15%;
+            height:50px;
+        }
     </style>
 
     <script type="text/javascript">
@@ -38,9 +45,53 @@
         <h1>Créer un nouvel adhérent</h1>
     </div>
 
+    {% if app.session.flashBag.has('warning_nom') %}
+        <div class="co1 alert alert-warning alert-dismissible" style="text-align: center">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close" style="padding-right: 2%">&times;</a>
+            {% for msg in app.session.flashBag.get('warning_nom') %}
+                {{ msg }}
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    {% if app.session.flashBag.has('warning_prenom') %}
+        <div class="co1 alert alert-warning alert-dismissible" style="text-align: center">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close" style="padding-right: 2%">&times;</a>
+            {% for msg in app.session.flashBag.get('warning_prenom') %}
+                {{ msg }}
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    {% if app.session.flashBag.has('warning_adresse') %}
+        <div class="co1 alert alert-warning alert-dismissible" style="text-align: center">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close" style="padding-right: 2%">&times;</a>
+            {% for msg in app.session.flashBag.get('warning_adresse') %}
+                {{ msg }}
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    {% if app.session.flashBag.has('warning_cp') %}
+        <div class="co1 alert alert-warning alert-dismissible" style="text-align: center">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close" style="padding-right: 2%">&times;</a>
+            {% for msg in app.session.flashBag.get('warning_cp') %}
+                {{ msg }}
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    {% if app.session.flashBag.has('warning_ville') %}
+        <div class="co1 alert alert-warning alert-dismissible" style="text-align: center">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close" style="padding-right: 2%">&times;</a>
+            {% for msg in app.session.flashBag.get('warning_ville') %}
+                {{ msg }}
+            {% endfor %}
+        </div>
+    {% endif %}
 
 
-
+    {#
     <div class="bonj">
         <form class="ui form">
 
@@ -95,46 +146,66 @@
         </form>
 
     </div>
-    {##}
+    #}
+
+
+
     {{ form_start(form) }}
     <div class="bonj">
         <form class="ui form">
-
             <div class="ui form">
-                <div class="inline fields">
-                    {{ form_row(form.sexeAdherent) }}
+
+                <div class="required inline field">
+                    {# {{ form_row(form.sexeAdherent) }} #}
+                    {{ form_label(form.sexeAdherent, 'Sexe adhérent :', {'label_attr': {'class': 'foo required field'}}) }}
+                    {{ form_widget(form.sexeAdherent) }}
                 </div>
+
+
+
+            <div class="required inline field">
+                {{ form_label(form.nomAdherent, 'Nom adhérent :', {'label_attr': {'class': 'foo required field'}}) }}
+                {{ form_widget(form.nomAdherent) }}
+                {# {{ form_row(form.nomAdherent) }} #}
+
             </div>
 
             <div class="required inline field">
-                {#{{ form_label(form.nomAdherent, 'Nom adhérent :', {'label_attr': {'class': 'foo'}}) }}#}
-                {{ form_row(form.nomAdherent) }}
+                {# {{ form_row(form.prenomAdherent) }} #}
+                {{ form_label(form.prenomAdherent, 'Prénom adhérent :', {'label_attr': {'class': 'foo required field' }}) }}
+                {{ form_widget(form.prenomAdherent) }}
             </div>
 
             <div class="required inline field">
-                {{ form_row(form.prenomAdherent) }}
+                {# {{ form_row(form.adresseAdherent) }} #}
+                {{ form_label(form.adresseAdherent, 'Adresse adhérent :', {'label_attr': {'class': 'foo required field'}}) }}
+                {{ form_widget(form.adresseAdherent) }}
             </div>
 
             <div class="required inline field">
-                {{ form_row(form.adresseAdherent) }}
+                {# {{ form_row(form.codePostalAdherent) }} #}
+                {{ form_label(form.codePostalAdherent, 'Code postal adhérent :', {'label_attr': {'class': 'foo required field'}}) }}
+                {{ form_widget(form.codePostalAdherent) }}
             </div>
 
             <div class="required inline field">
-                {{ form_row(form.codePostalAdherent) }}
+                {# {{ form_row(form.villeAdherent) }} #}
+                {{ form_label(form.villeAdherent, 'Ville adhérent :', {'label_attr': {'class': 'foo required field'}}) }}
+                {{ form_widget(form.villeAdherent) }}
             </div>
 
             <div class="required inline field">
-                {{ form_row(form.villeAdherent) }}
-            </div>
-
-            <div class="required inline field">
-                {{ form_row(form.dateNaissanceAdherent) }}
+                {# {{ form_row(form.dateNaissanceAdherent) }} #}
+                {{ form_label(form.dateNaissanceAdherent, 'Date naissance adhérent :', {'label_attr': {'class': 'foo required field'}}) }}
+                {{ form_widget(form.dateNaissanceAdherent) }}
             </div>
 
 
 
             <button class="ui button" type="submit" value="continuer">Continuer l'inscription</button>
+            </div>
         </form>
+
 
     </div>
 

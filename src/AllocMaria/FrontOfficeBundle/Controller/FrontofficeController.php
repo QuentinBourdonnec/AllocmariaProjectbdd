@@ -191,19 +191,70 @@ class FrontofficeController extends Controller
         //$submit = $request->request->get('action');
 
         if ($request->isMethod('POST')) {
+            /*Vérification des champs (expressions regulieres) */
+
+
             $form->handleRequest($request);
+            $sexe = $form->get('sexeAdherent')->getData();
             $nom = $form->get('nomAdherent')->getData();
             $prenom = $form->get('prenomAdherent')->getData();
             $adresse = $form->get('adresseAdherent')->getData();
             $ville = $form->get('villeAdherent')->getData();
             $cp = $form->get('codePostalAdherent')->getData();
             $date_naissance = $form->get('dateNaissanceAdherent')->getData();
+
+            if ( preg_match ( "/^[a-zA-Z]+$/" , $nom ) )
+            {
+                $erreur = 1;
+            }else{
+                $this->addFlash('warning_nom', "Votre saisie nom est incorrecte");
+                return $this->render("AllocMariaFrontOfficeBundle:FrontOffice\BureauDesSections:NouvelAdherent.html.twig", array("form" => $form->createView()));
+            }
+
+            if ( preg_match ( " /^[a-zA-Z]+$/ " , $prenom ) )
+            {
+                $erreur = 1;
+            }else{
+                $this->addFlash('warning_prenom', "Votre saisie prenom est incorrecte");
+                return $this->render("AllocMariaFrontOfficeBundle:FrontOffice\BureauDesSections:NouvelAdherent.html.twig", array("form" => $form->createView()));
+            }
+
+            if ( preg_match ( "#[0-9]{0,3}(?:(?:[,. ]){1}[-a-zA-Zàâäéèêëïîôöùûüç]+)+#i" , $adresse ) )
+            {
+                $erreur = 1;
+            }else{
+                $this->addFlash('warning_adresse', "Votre saisie adresse est incorrecte");
+                return $this->render("AllocMariaFrontOfficeBundle:FrontOffice\BureauDesSections:NouvelAdherent.html.twig", array("form" => $form->createView()));
+            }
+
+            if ( preg_match ( "/^(([0-8][0-9])|(9[0-5]))[0-9]{3}$/" , $cp ) )
+            {
+                $erreur = 1;
+            }else{
+                $this->addFlash('warning_cp', "Votre saisie code postal est incorrecte");
+                return $this->render("AllocMariaFrontOfficeBundle:FrontOffice\BureauDesSections:NouvelAdherent.html.twig", array("form" => $form->createView()));
+            }
+
+            if ( preg_match ( "/^[a-zA-Z]+$/" , $ville ) )
+            {
+                $erreur = 1;
+            }else{
+                $this->addFlash('warning_ville', "Votre saisie ville est incorrecte");
+                return $this->render("AllocMariaFrontOfficeBundle:FrontOffice\BureauDesSections:NouvelAdherent.html.twig", array("form" => $form->createView()));
+            }
+
+            if ($sexe == true){
+                $_SESSION['sexeAdherent'] = "Homme";
+            }
+            else
+                $_SESSION['sexeAdherent'] = "Femme";
+
             $_SESSION['nomAdherent'] = $nom;
             $_SESSION['prenomAdherent'] = $prenom;
             $_SESSION['adresseAdherent'] = $adresse;
             $_SESSION['villeAdherent'] = $ville;
             $_SESSION['codePostalAdherent'] = $cp;
-            $_SESSION['dateNaissanceAdherent'] = $date_naissance;
+            $_SESSION['dateNaissanceAdherent'] = $date_naissance->format('d/m/Y');
 
             return $this->render('AllocMariaFrontOfficeBundle:FrontOffice\BureauDesSections:NouvelAdherentMineur.html.twig',array('session'=> $_SESSION));
 
