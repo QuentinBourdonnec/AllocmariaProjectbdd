@@ -7,6 +7,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\HttpFoundation\Session\Session;
 use AllocMaria\BackOfficeBundle\Entity\Adherent;
 use AllocMaria\BackOfficeBundle\Entity\FamilleAdherent;
@@ -23,7 +24,7 @@ class BackofficeController extends Controller
         //Formulaire de connexion au bureau des sections
         $form = $this->createFormBuilder()
             ->add('identifiant_administration', TextType::class)
-            ->add('mdp_administration', TextType::class)
+            ->add('mdp_administration', PasswordType::class)
             ->getForm();
         $form->handleRequest($request);
 

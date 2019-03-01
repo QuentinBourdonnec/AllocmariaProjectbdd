@@ -12,6 +12,13 @@
             margin-right:20%;
             margin-bottom:4%;
         }
+
+        .co1
+        {
+            margin-left:20%;
+            margin-right:15%;
+            height:50px;
+        }
     </style>
 
 
@@ -29,63 +36,83 @@
         <h1>Finalisation inscription adhérent adulte</h1>
     </div>
 
+    {% if app.session.flashBag.has('warning_condition') %}
+        <div class="co1 alert alert-warning alert-dismissible" style="text-align: center">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close" style="padding-right: 2%">&times;</a>
+            {% for msg in app.session.flashBag.get('warning_condition') %}
+                {{ msg }}
+            {% endfor %}
+        </div>
+    {% endif %}
 
+    {{ form_start(form) }}
     <div class="bonj">
         <form class="ui form">
-
-
-
-
-
-            <div class="required inline field">
-                <label>Nom :</label><p>Bourdonnec</p>
-            </div>
-            <div class="required inline field">
-                <label>Prénom :</label><p>Quentin</p>
-            </div>
-            <div class="required inline field">
-                <label>Adresse :</label><p>5 rue cuirassé bretagne</p>
-            </div>
-            <div class="required inline field">
-                <label>Ville :</label><p>BREST</p>
-            </div>
-            <div class="required inline field">
-                <label>Code postal :</label><p>29200</p>
-            </div>
-            <div class="required inline field">
-                <label>Date naissance :</label><p>10/07/1997</p>
-            </div>
-
-
+            <div class="ui form">
 
 
             <div class="required inline field">
-                <label>Mail :</label>
-                <input type="text" name="Mail" placeholder="Mail">
-            </div>
-            <div class="required inline field">
-                <label>Numéro portable :</label>
-                <input type="text" name="Numéro portable" placeholder="Numéro portable">
+                <label>Sexe :</label><p>{{ session.sexeAdherent }}</p>
             </div>
 
             <div class="required inline field">
-                <div class="ui checkbox">
+                <label>Nom :</label><p>{{ session.nomAdherent }}</p>
+            </div>
+            <div class="required inline field">
+                <label>Prénom :</label><p>{{ session.prenomAdherent }}</p>
+            </div>
+            <div class="required inline field">
+                <label>Adresse :</label><p>{{ session.adresseAdherent }}</p>
+            </div>
+            <div class="required inline field">
+                <label>Ville :</label><p>{{ session.villeAdherent }}</p>
+            </div>
+            <div class="required inline field">
+                <label>Code postal :</label><p>{{ session.codePostalAdherent }}</p>
+            </div>
+            <div class="required inline field">
+                <label>Date naissance :</label><p>{{ session.dateNaissanceAdherent }}</p>
+            </div>
+
+
+
+                <div class="required inline field">
+                    {# {{ form_row(form.sexeAdherent) }} #}
+                    {{ form_label(form.mailAdherent, 'Mail adhérent :', {'label_attr': {'class': 'foo required field'}}) }}
+                    {{ form_widget(form.mailAdherent) }}
+                </div>
+
+                <div class="required inline field">
+                    {# {{ form_row(form.sexeAdherent) }} #}
+                    {{ form_label(form.telPortableAdherent, 'Téléphone adhérent :', {'label_attr': {'class': 'foo required field'}}) }}
+                    {{ form_widget(form.telPortableAdherent) }}
+                </div>
+
+
+            <div class="required inline field">
+                <!--<div class="ui checked checkbox">-->
                     <input type="checkbox" name="conditions">
                     <label>En soumettant ce formulaire, j'accepte que les informations saisies soient utilisées et exploitées par l'Amicale Laïque</label>
-                </div>
+                <!--</div>-->
             </div>
 
-            <div class="required inline field">
-                <div class="ui checkbox">
+            <div class="inline field">
+                <!--<div class="ui checkbox">-->
                     <input type="checkbox" name="image">
                     <label>J'accepte le droit à l'image</label>
-                </div>
+                <!--</div>-->
             </div>
+            {#<div class="ui button">
 
+            {{ form_widget(form2.validerAdherent, { 'label': 'Créer le nouvel adhérent'}) }}
 
+            </div>#}
 
-            <button class="ui button" type="submit">Créer le nouvel adhérent</button>
+                <button class="ui button" type="submit" value="continuer">Créer le nouvel adhérent</button>
+
+            </div>
         </form>
+
 
 
 

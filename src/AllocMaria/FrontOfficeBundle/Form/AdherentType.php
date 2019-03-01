@@ -8,6 +8,9 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType ;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
+use Symfony\Component\Form\Extension\Core\Type\EmailType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\BirthdayType;
 
 class AdherentType extends AbstractType
 {
@@ -17,7 +20,7 @@ class AdherentType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         //$builder->add('sexeAdherent', ChoiceType::class, ['choices'  => ['Homme' => true, 'Femme' => false]])->add('nomAdherent', TextType::class)->add('prenomAdherent', TextType::class)->add('adresseAdherent', TextType::class)->add('codePostalAdherent', TextType::class)->add('villeAdherent', TextType::class)->add('dateNaissanceAdherent', BirthdayType::class, ['placeholder' => ['year' => 'Année', 'month' => 'Mois', 'day' => 'Jour']]);
-        $builder->add('sexeAdherent', ChoiceType::class, ['choices'  => ['Homme' => true, 'Femme' => false]])->add('nomAdherent', TextType::class, ['attr' => ['placeholder' => 'Nom']])->add('prenomAdherent', TextType::class, ['attr' => ['placeholder' => 'Prénom']])->add('adresseAdherent', TextType::class, ['attr' => ['placeholder' => 'Adresse']])->add('codePostalAdherent', TextType::class, ['attr' => ['placeholder' => 'Code Postal']])->add('villeAdherent', TextType::class, ['attr' => ['placeholder' => 'Ville']])->add('dateNaissanceAdherent', DateType::class, ['widget' => 'single_text', 'format' => 'yyyy-MM-dd']);
+        $builder->add('sexeAdherent', ChoiceType::class, ['choices'  => ['Homme' => true, 'Femme' => false]])->add('nomAdherent', TextType::class, ['attr' => ['placeholder' => 'Nom']])->add('prenomAdherent', TextType::class, ['attr' => ['placeholder' => 'Prénom']])->add('adresseAdherent', TextType::class, ['attr' => ['placeholder' => 'Adresse']])->add('codePostalAdherent', TextType::class, ['attr' => ['placeholder' => 'Code Postal']])->add('villeAdherent', TextType::class, ['attr' => ['placeholder' => 'Ville']])->add('dateNaissanceAdherent', BirthdayType::class, ['widget' => 'single_text', 'format' => 'yyyy-MM-dd'])->add('mailAdherent', EmailType::class, ['attr' => ['placeholder' => 'Mail']])->add('telPortableAdherent', TextType::class, ['attr' => ['placeholder' => 'Téléphone']])->add('validerAdherent', SubmitType::class, ['label' => 'Finaliser']);
     }
     
     /**

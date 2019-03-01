@@ -7,13 +7,26 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use AllocMaria\FrontOfficeBundle\Entity\UserBureauAssociation;
 use AllocMaria\FrontOfficeBundle\Entity\Adherent;
 use AllocMaria\FrontOfficeBundle\Entity\ActiviteSection;
 use AllocMaria\FrontOfficeBundle\Entity\Section;
 use AllocMaria\FrontOfficeBundle\Entity\TypeUser;
+use AllocMaria\FrontOfficeBundle\Entity\FamilleAdherent;
 use AllocMaria\FrontOfficeBundle\Form\AdherentType;
 use Symfony\Component\HttpFoundation\Session\Session;
+use \Date;
+use \DateInterval;
+use Doctrine\ORM\Query;
+use Doctrine\DBAL\Connection;
+use Doctrine\DBAL\DBALException;
+use Doctrine\DBAL\Driver\ServerInfoAwareConnection;
+use Doctrine\DBAL\Exception\TableNotFoundException;
+use Doctrine\DBAL\Schema\Schema;
+use Doctrine\DBAL\DriverManager;
+use PDO;
+use Doctrine\ORM\Query\bindValue;
 
 class FrontofficeController extends Controller
 {
@@ -25,14 +38,14 @@ class FrontofficeController extends Controller
         //Formulaire de connexion au bureau des sections
         $form = $this->createFormBuilder()
             ->add('identifiant_section', TextType::class)
-            ->add('mdp_section', TextType::class)
+            ->add('mdp_section', PasswordType::class)
             ->getForm();
         $form->handleRequest($request);
 
         //Formulaire de connexion au bureau des encaissement
         $form2 = $this->createFormBuilder()
             ->add('identifiant_encaissement', TextType::class)
-            ->add('mdp_encaissement', TextType::class)
+            ->add('mdp_encaissement', PasswordType::class)
             ->getForm();
         $form2->handleRequest($request);
 
@@ -188,7 +201,6 @@ class FrontofficeController extends Controller
             //$nom=$form['nomAdherent'];
             //return $this->redirectToRoute('espace_bureau_sections_nouvel_adhérent_mineur_alloc_maria_front_office_homepage',array("noms"=>$nom));
         /*}*/
-        //$submit = $request->request->get('action');
 
         if ($request->isMethod('POST')) {
             /*Vérification des champs (expressions regulieres) */
@@ -202,6 +214,7 @@ class FrontofficeController extends Controller
             $ville = $form->get('villeAdherent')->getData();
             $cp = $form->get('codePostalAdherent')->getData();
             $date_naissance = $form->get('dateNaissanceAdherent')->getData();
+            echo $sexe;
 
             if ( preg_match ( "/^[a-zA-Z]+$/" , $nom ) )
             {
@@ -255,9 +268,19 @@ class FrontofficeController extends Controller
             $_SESSION['villeAdherent'] = $ville;
             $_SESSION['codePostalAdherent'] = $cp;
             $_SESSION['dateNaissanceAdherent'] = $date_naissance->format('d/m/Y');
+            $_SESSION['dateNaissanceAdherent1'] = $date_naissance->format('Y-m-d');
 
-            return $this->render('AllocMariaFrontOfficeBundle:FrontOffice\BureauDesSections:NouvelAdherentMineur.html.twig',array('session'=> $_SESSION));
+            //$date_aujourdhui = new Date();
+            //$date_18 = $date_aujourdhui->sub(new DateInterval('P18Y'));
+            $diff = (new \DateTime())->diff(new \DateTime($_SESSION['dateNaissanceAdherent']));
+            $annee = $diff->y;
 
+            if($annee >= 18){
+                return $this->redirectToRoute('espace_bureau_sections_nouvel_adhérent_majeur_alloc_maria_front_office_homepage',array('session'=> $_SESSION));
+                //return $this->render('AllocMariaFrontOfficeBundle:FrontOffice\BureauDesSections:NouvelAdherentMajeur.html.twig',array('session'=> $_SESSION, "form2" => $form->createView()));
+            }else{
+                return $this->render('AllocMariaFrontOfficeBundle:FrontOffice\BureauDesSections:NouvelAdherentMineur.html.twig',array('session'=> $_SESSION));
+            }
         }
         return $this->render("AllocMariaFrontOfficeBundle:FrontOffice\BureauDesSections:NouvelAdherent.html.twig", array("form" => $form->createView()));
 
@@ -277,13 +300,63 @@ class FrontofficeController extends Controller
         return $this->render('AllocMariaFrontOfficeBundle:FrontOffice\BureauDesSections:NouvelAdherentMineur.html.twig',array('session'=> $_SESSION));
     }
 
-    public function NouvelAdherentMajeurAction()
+
+    public function NouvelAdherentMajeurAction (Request $request)
     {
-        /*if(empty($_POST)){
-            return $this->redirectToRoute("accueil_alloc_maria_front_office_homepage");
-        }*/
-        return $this->render('AllocMariaFrontOfficeBundle:FrontOffice\BureauDesSections:NouvelAdherentMajeur.html.twig');
+        $em = $this->getDoctrine()->getManager();
+
+        $adherent = new Adherent();
+
+        $form = $this->get('form.factory')->create(AdherentType::class, $adherent);
+        $form->handleRequest($request);
+
+
+        if($form->isSubmitted()){
+
+            $mail = $form->get('mailAdherent')->getData();
+            $tel = $form->get('telPortableAdherent')->getData();
+            $_SESSION['mailAdherent'] = $mail;
+            $_SESSION['telPortableAdherent'] = $tel;
+            $_SESSION['idFamille'] = "1";
+
+            /* On veut récupérer un id non utilisé */
+            $query = $em->createQuery("SELECT adherent.idAdherent FROM AllocMariaFrontOfficeBundle:Adherent adherent");
+            $res=$query->getResult();
+            $nb_id = count($res)+1;
+
+            /* On récupère le sexe de l'adhérent */
+            if($_SESSION['sexeAdherent'] == "Homme"){
+                $sexe = 1;
+            }else{
+                $sexe =0;
+            }
+
+            $date_du_jour = date("Y-m-d");
+
+
+            $sql = 'INSERT INTO adherent (id_adherent, nom_adherent, prenom_adherent, date_naissance_adherent, adresse_adherent, code_postal_adherent, ville_adherent, tel_portable_adherent, mail_adherent, date_creation_adherent, sexe_adherent, id_famille) VALUES ("'.$nb_id.'", "'.$_SESSION['nomAdherent'].'", "'.$_SESSION['prenomAdherent'].'", "'.$_SESSION['dateNaissanceAdherent1'].'", "'.$_SESSION['adresseAdherent'].'", "'.$_SESSION['codePostalAdherent'].'", "'.$_SESSION['villeAdherent'].'", "'.$_SESSION['telPortableAdherent'].'", "'.$_SESSION['mailAdherent'].'", "'.$date_du_jour.'",  "'.$sexe.'", 1)';
+            $stmt = $em->getConnection()->prepare($sql);
+            $result = $stmt->execute();
+
+
+            /* On vérifie si la case d'acceptation de l'utilisation des informations à été cochée */
+            if(isset($_POST['conditions'])){
+                $res=1;
+            }
+            else{
+                $this->addFlash('warning_condition', "Vous n'avez pas accepté l'utilisation de vos informations");
+                return $this->render('AllocMariaFrontOfficeBundle:FrontOffice\BureauDesSections:NouvelAdherentMajeur.html.twig', array('session'=> $_SESSION, "form" => $form->createView()));
+            }
+
+
+            return $this->render('AllocMariaFrontOfficeBundle:FrontOffice\BureauDesSections:BureauSections.html.twig',array('session'=> $_SESSION));
+        }
+        return $this->render('AllocMariaFrontOfficeBundle:FrontOffice\BureauDesSections:NouvelAdherentMajeur.html.twig', array('session'=> $_SESSION, "form" => $form->createView()));
     }
+
+
+
+
 
     public function ListeAdherentAction(Request $request)
     {
