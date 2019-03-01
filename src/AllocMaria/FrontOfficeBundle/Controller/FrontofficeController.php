@@ -279,7 +279,8 @@ class FrontofficeController extends Controller
                 return $this->redirectToRoute('espace_bureau_sections_nouvel_adhérent_majeur_alloc_maria_front_office_homepage',array('session'=> $_SESSION));
                 //return $this->render('AllocMariaFrontOfficeBundle:FrontOffice\BureauDesSections:NouvelAdherentMajeur.html.twig',array('session'=> $_SESSION, "form2" => $form->createView()));
             }else{
-                return $this->render('AllocMariaFrontOfficeBundle:FrontOffice\BureauDesSections:NouvelAdherentMineur.html.twig',array('session'=> $_SESSION));
+                return $this->redirectToRoute('espace_bureau_sections_nouvel_adhérent_mineur_alloc_maria_front_office_homepage',array('session'=> $_SESSION));
+                //return $this->render('AllocMariaFrontOfficeBundle:FrontOffice\BureauDesSections:NouvelAdherentMineur.html.twig',array('session'=> $_SESSION));
             }
         }
         return $this->render("AllocMariaFrontOfficeBundle:FrontOffice\BureauDesSections:NouvelAdherent.html.twig", array("form" => $form->createView()));
@@ -292,12 +293,122 @@ class FrontofficeController extends Controller
 
 
 
-    public function NouvelAdherentMineurAction()
+    public function NouvelAdherentMineurAction(Request $request)
     {
         /*if(empty($_POST)){
             return $this->redirectToRoute("accueil_alloc_maria_front_office_homepage");
         }*/
-        return $this->render('AllocMariaFrontOfficeBundle:FrontOffice\BureauDesSections:NouvelAdherentMineur.html.twig',array('session'=> $_SESSION));
+
+        $em = $this->getDoctrine()->getManager();
+
+        //Formulaire d'information des personnes référentes aux mineurs
+        $form = $this->createFormBuilder()
+            ->add('nomReferent', TextType::class, ['attr' => ['placeholder' => 'Nom']])
+            ->add('prenomReferent', TextType::class, ['attr' => ['placeholder' => 'Prénom']])
+            ->add('telephoneReferent', TextType::class, ['required'   => false, 'attr' => ['placeholder' => 'Numéro domicile']])
+            ->add('portableReferent', TextType::class, ['attr' => ['placeholder' => 'Numéro portable']])
+            ->add('mailReferent', TextType::class, ['attr' => ['placeholder' => 'Mail']])
+            ->add('adresseReferent', TextType::class, ['required'   => false, 'attr' => ['placeholder' => 'Adresse']])
+            ->add('villeReferent', TextType::class, ['required'   => false, 'attr' => ['placeholder' => 'Ville']])
+            ->add('codePostalReferent', TextType::class, ['required'   => false, 'attr' => ['placeholder' => 'Code postal']])
+            ->add('nomReferent1', TextType::class, ['attr' => ['placeholder' => 'Nom']])
+            ->add('prenomReferent1', TextType::class, ['attr' => ['placeholder' => 'Prénom']])
+            ->add('telephoneReferent1', TextType::class, ['required'   => false, 'attr' => ['placeholder' => 'Numéro domicile']])
+            ->add('portableReferent1', TextType::class, ['attr' => ['placeholder' => 'Numéro portable']])
+            ->add('mailReferent1', TextType::class, ['attr' => ['placeholder' => 'Mail']])
+            ->add('adresseReferent1', TextType::class, ['required'   => false, 'attr' => ['placeholder' => 'Adresse']])
+            ->add('villeReferent1', TextType::class, ['required'   => false, 'attr' => ['placeholder' => 'Ville']])
+            ->add('codePostalReferent1', TextType::class, ['required'   => false, 'attr' => ['placeholder' => 'Code postal']])
+            ->getForm();
+        $form->handleRequest($request);
+
+        if($form->isSubmitted()) {
+
+            /* On vérifie si la case d'acceptation de l'utilisation des informations à été cochée */
+            if(isset($_POST['conditions'])){
+                $res=1;
+            }
+            else{
+                $this->addFlash('warning_condition', "Vous n'avez pas accepté l'utilisation de vos informations");
+                return $this->render('AllocMariaFrontOfficeBundle:FrontOffice\BureauDesSections:NouvelAdherentMineur.html.twig', array('session'=> $_SESSION, "form" => $form->createView()));
+            }
+
+
+            $nom = $form->get('nomReferent')->getData();
+            $prenom = $form->get('prenomReferent')->getData();
+            $telephone = $form->get('telephoneReferent')->getData();
+            $portable = $form->get('portableReferent')->getData();
+            $mail = $form->get('mailReferent')->getData();
+            $adresse = $form->get('adresseReferent')->getData();
+            $ville = $form->get('villeReferent')->getData();
+            $codepostal = $form->get('codePostalReferent')->getData();
+            $nom1 = $form->get('nomReferent1')->getData();
+            $prenom1 = $form->get('prenomReferent1')->getData();
+            $telephone1 = $form->get('telephoneReferent1')->getData();
+            $portable1 = $form->get('portableReferent1')->getData();
+            $mail1 = $form->get('mailReferent1')->getData();
+            $adresse1 = $form->get('adresseReferent1')->getData();
+            $ville1 = $form->get('villeReferent1')->getData();
+            $codepostal1 = $form->get('codePostalReferent1')->getData();
+
+            if(!isset($adresse) && !isset($ville) && !isset($codepostal)){
+                $adresse = $_SESSION['adresseAdherent'];
+                $ville = $_SESSION['villeAdherent'];
+                $codepostal = $_SESSION['codePostalAdherent'];
+            }
+
+            if(!isset($adresse1) && !isset($ville1) && !isset($codepostal1)){
+                $adresse1 = $_SESSION['adresseAdherent'];
+                $ville1 = $_SESSION['villeAdherent'];
+                $codepostal1 = $_SESSION['codePostalAdherent'];
+            }
+
+            if(!isset($telephone)){
+                $telephone = 0;
+            }
+
+
+            /* On veut récupérer un id non utilisé */
+            $query = $em->createQuery("SELECT adherent.idAdherent FROM AllocMariaFrontOfficeBundle:Adherent adherent");
+            $res=$query->getResult();
+            $nb_id = count($res)+1;
+
+            /* On récupère le sexe de l'adhérent */
+            if($_SESSION['sexeAdherent'] == "Homme"){
+                $sexe = 1;
+            }else{
+                $sexe =0;
+            }
+
+            $date_du_jour = date("Y-m-d");
+
+            /* On créer le nouvel adhérent */
+            $sql = 'INSERT INTO adherent (id_adherent, nom_adherent, prenom_adherent, date_naissance_adherent, adresse_adherent, code_postal_adherent, ville_adherent, date_creation_adherent, sexe_adherent, id_famille) VALUES ("'.$nb_id.'", "'.$_SESSION['nomAdherent'].'", "'.$_SESSION['prenomAdherent'].'", "'.$_SESSION['dateNaissanceAdherent1'].'", "'.$_SESSION['adresseAdherent'].'", "'.$_SESSION['codePostalAdherent'].'", "'.$_SESSION['villeAdherent'].'", "'.$date_du_jour.'",  "'.$sexe.'", 1)';
+            $stmt = $em->getConnection()->prepare($sql);
+            $result = $stmt->execute();
+
+            /* On veut récupérer un id non utilisé */
+            $query = $em->createQuery("SELECT referent.idReferent FROM AllocMariaFrontOfficeBundle:ReferentAdherent referent");
+            $res=$query->getResult();
+            $nb_id1 = count($res)+1;
+            $nb_id2 = count($res)+2;
+
+            /* On créer les nouveaux referents */
+            $sql = 'INSERT INTO referent_adherent (id_referent, Nom_referent, prenom_referent, telephone_referent, portable_referent, mail_referent, adresse_referent, ville_referent, code_postal_referent) VALUES ("'.$nb_id1.'", "'.$nom.'", "'.$prenom.'", "'.$telephone.'", "'.$portable.'", "'.$mail.'", "'.$adresse.'", "'.$ville.'",  "'.$codepostal.'")';
+            $stmt = $em->getConnection()->prepare($sql);
+            $result = $stmt->execute();
+
+            /* On créer les nouveaux referents */
+            $sql = 'INSERT INTO referent_adherent (id_referent, Nom_referent, prenom_referent, telephone_referent, portable_referent, mail_referent, adresse_referent, ville_referent, code_postal_referent) VALUES ("'.$nb_id2.'", "'.$nom1.'", "'.$prenom1.'", "'.$telephone1.'", "'.$portable1.'", "'.$mail1.'", "'.$adresse1.'", "'.$ville1.'",  "'.$codepostal1.'")';
+            $stmt = $em->getConnection()->prepare($sql);
+            $result = $stmt->execute();
+
+
+            return $this->render('AllocMariaFrontOfficeBundle:FrontOffice\BureauDesSections:BureauSections.html.twig',array('session'=> $_SESSION));
+
+        }
+
+        return $this->render('AllocMariaFrontOfficeBundle:FrontOffice\BureauDesSections:NouvelAdherentMineur.html.twig',array('session'=> $_SESSION, "form" => $form->createView()));
     }
 
 
